@@ -3,23 +3,21 @@
  * @author: maxamax2
  */
 
-/* IMPORTER D'ABORD LES POLICES DE CARACTÈRES */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Inter&display=swap');
-
 /* IMPORTER LES FICHIERS CSS */
 @import url(normalize.css);
 @import url(utilitaires.css);
 @import url(base.css);
 @import url(typo.css);
+@import url(menu.css);
 /*
 * BODY
 * HEADER
+* DIV ANIMATION
+* SECTION INTRO
 *
 *
 *
-*
-*
-*
+* BOUTON POUR DÉMARRER LE JEU
 * FOOTER
 *
 *
@@ -31,36 +29,216 @@
 }
 
 /* HEADER */
+/* svg */
+@media (min-width:600px){
+    svg {
+        width: 500px;
+        margin-top: 20px;
+        margin-left: 100px; 
+        margin-bottom: 25px; 
+    }
+}
+@media (min-width:800px){
+    svg {
+        width: 500px;
+        margin-top: 20px;
+        margin-left: 100px; 
+        margin-bottom: 25px; 
+    }
+}
+
 .header{
     background-color: #2D3540;
+}
+/* nav */
+@media (min-width:600px){
+    .nav {
+        margin-left: 100px;
+    }
+}
+
+/* DIV ANIMATION */
+.div__animation{
+width: 80%;
+margin: 0 auto;
+
+}
+.video{
+    display: block;
+    width: 100%;
+   
+}
+@media (min-width:600px){
+    video {
+        width: 100%;
+        
+        
+    }
+}
+@media (min-width:800px){
+    video {
+        width: 100%;
+        
+    }
+}
+@media (min-width:800px){
+    svg {
+        width: 500px;
+        margin-top: 20px;
+        margin-left: 100px; 
+        margin-bottom: 25px; 
+    }
+}
+
+/* paragraphe animation */
+
+
+/* SECTION INTRO */
+/* section introduction */
+.introduction{
+    margin-top: 75px;
+}
+@media (min-width:800px){
+    .introduction {
+    width: 90%;
+    margin-left: 200px;    
+    }
+}
+/* image de l'introduction */
+.img__intro{
+    display: flex;
+    justify-content: center;
+}
+
+/* div qui englobe tous les éléments */
+@media (min-width:800px){
+    .intro__div {
+       display: flex;
+       justify-content: center;
+    }
+}
+/* div qui englobe tous les paragraphes */
+@media (min-width:600px){
+    .p__div {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+}
+@media (min-width:800px){
+    .p__div {
+    width: 50%;
+    margin: 0;
+    margin-top: -20px;
+    }
+}
+/* paragraphes d'intro */
+.p__intro{
+    display: flex;
+    text-align: justify;
+    margin-left: 18px;
+    margin-right: 18px;
+  
+}
+
+/* BOUTON POUR DÉMARRER LE JEU */
+.bouton__commencer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.btn__commencer{
+    background-color: #F1DB32;
+    color: #02132B;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+}
+@media (min-width:600px){
+     .btn__commencer{
+       width: 410px;
+      
+    }
+}
+@media (min-width:800px){
+     .btn__commencer{
+        height: 65px;
+        width: 490px;
+    }
+}
+.btn__commencer:hover{
+    background-color: white;
+    color: #02132B;
+    box-shadow: 5px 5px #F1DB32;
+}
+.btn_demarrer:focus{
+    background-color: #F1DB32;
+    color: #02132B;
+    border: solid #02132B 5px;
+ }
+
+/* FOOTER */
+/* icônes réseaux sociaux */
+.social {
+    text-align: center;
+  }
+
+  .social-menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+  }
+  .social-menu__lien {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 6px;
+    background-repeat: no-repeat;
+    font-size: 0;
+    opacity: 1;
+    background-image: url(//hautemontagne.ca/sources/sprite-sociaux.png);
+    transition: transform .2s ease;
+  }
+  .social-menu__item:first-child .social-menu__lien:link {
+    background-position: -185px -10px;
+  }
+  .social-menu__item:nth-child(2) .social-menu__lien:link {
+    background-position: -185px -46px;
+  }
+  .social-menu__item:nth-child(3) .social-menu__lien:link {
+    background-position: -185px -82px;
+  }
+  .social-menu__item:nth-child(4) .social-menu__lien:link {
+    background-position: -185px -226px;
+  }
+  .social-menu__item:first-child .social-menu__lien:hover {
+    background-position: -423px -10px;
+    transform: scale(1.07) rotate(10deg);
+  }
+  .social-menu__item:nth-child(2) .social-menu__lien:hover {
+    background-position: -423px -46px;
+    transform: scale(1.07) rotate(10deg);
+  }
+  .social-menu__item:nth-child(3) .social-menu__lien:hover {
+    background-position: -423px -82px;
+    transform: scale(1.07) rotate(10deg);
+  }
+  .social-menu__item:nth-child(4) .social-menu__lien:hover {
+    background-position: -423px -226px;
+    transform: scale(1.07) rotate(10deg);
+  }
+.footer{
+    background-color: #2D3540;
+    padding-bottom: 30px;
+}
+.p__footer{
+    text-align: center;
+    color: white;
     
 }
 
-.nav__header{
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-.nav__lien{
-    display: flex;
-    align-items: center;
-    color: white;
 
-}
 
-/* FOOTER */
-.footer{
-    background-color: #2D3540;
-}
-.nav__footer{
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-
-.nav__lien-footer{
-    display: flex;
-    align-items: center;
-    color: white;
-
-}
