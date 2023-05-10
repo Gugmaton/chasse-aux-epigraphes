@@ -12,7 +12,7 @@
   <meta name="author" content="Énigma & le programme Techniques d’intégration multimédia du Cégep de Sainte-Foy">
   <title>Chasse aux épigraphes</title>
   <link rel="stylesheet" href="../assets/css/style-mandatD.css">
-  <script defer src="../menu.js"></script>
+  <script defer src="../js/menu.js"></script>
 </head>
 
 <body class="body">
@@ -191,7 +191,98 @@
     </nav>
   </header>
   <main>
+    <h1>Courez la chance de gagner un forfait pour deux à l’Auberge des Illustres voisins incluant</h1>
+    <h2>- Le souper à la carte</h2>
+    <h2>- La nuitée à l’Auberge</h2>
+    <h2>- Le petit-déjeuner à la carte</h2>
 
+    <form id="job-application-form" class="form">
+      <header>
+        <p>
+          Pour participer, remplissez le formulaire d’inscription.
+        </p>
+      </header>
+      <fieldset>
+        <legend>
+          <h2>Inscription au concours</h2>
+        </legend>
+        <div class="field">
+          <label for="first-name">Prénom</label>
+          <input id="first-name" type="text" name="first-name" required />
+          <div id="first-name-required" class="error">Le prénom est requis.</div>
+        </div>
+        <div class="field">
+          <label for="last-name">Nom</label>
+          <input id="last-name" type="text" name="last-name" required />
+          <div id="last-name-required" class="error">Le nom est requis.</div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="field field-large">
+          <label for="email">Adresse</label>
+          <input id="email" type="text" name="email" required />
+          <div id="email-required" class="error">L'adresse est requise.</div>
+          <div id="email-invalid" class="error">L'adresse est invalide.</div>
+        </div>
+        <div class="field field-large">
+          <label for="zip-code">Ville</label>
+          <input id="zip-code" type="text" name="zip-code" required />
+          <div id="zip-code-required" class="error">La ville est requis.</div>
+          <div id="zip-code-invalid" class="error">La ville est invalide.</div>
+        </div>
+        <div class="field field-large">
+          <label for="province">Province</label>
+          <select>
+            <option value="quebec">Quebec</option>
+            <option value="ontario">Ontario</option>
+            <option value="alberta">Alberta</option>
+            <option value="saskatchewan">Saskatchewan</option>
+            <option value="colombie-britannique">Colombie-Britannique</option>
+            <option value="manitoba">Manitoba</option>
+            <option value="île-du-Prince-Édouard">Île-du-Prince-Édouard</option>
+            <option value="nouvelle-Écosse">Nouvelle-Écosse</option>
+            <option value="nouveau-Brunswick">Nouveau-Brunswick</option>
+            <option value="terre-Neuve-et-Labrador">Terre-Neuve-et-Labrador</option>
+            <option value="territoires du Nord-Ouest">Territoires du Nord-Ouest</option>
+            <option value="nunavut">Nunavut </option>
+            <option value="yukon">Yukon</option>
+          </select>
+        </div>
+        <div class="field field-large">
+          <label for="zip-code">Code postal</label>
+          <input id="zip-code" type="text" name="zip-code" required />
+          <div id="zip-code-required" class="error">Le code postal est requis.</div>
+          <div id="zip-code-invalid" class="error">Le code postal est invalide.</div>
+        </div>
+        <div class="field field-large">
+          <label for="zip-code">Téléphone</label>
+          <input id="zip-code" type="text" name="zip-code" required />
+          <div id="zip-code-required" class="error">Le téléphone est requis.</div>
+          <div id="zip-code-invalid" class="error">Le téléphone est invalide.</div>
+        </div>
+        <div class="field field-large">
+          <label for="email">Adresse de courriel</label>
+          <input id="email" type="text" name="email" required />
+          <div id="email-required" class="error">L'adresse courriel est requise.</div>
+          <div id="email-invalid" class="error">L'adresse courriel est invalide.</div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="field">
+          <label for="experience">Chasse aux épigraphes</label>
+          <textarea name="" id="" cols="30" rows="5"></textarea>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="reglement">
+          <input type="checkbox" name="acceptationReglement" id="acceptationReglement" required />
+          <label for="acceptationReglement"> J'ai lu et j'accepte le règlement</label>
+        </div>
+      </fieldset>
+      <div>
+        <input type="submit" value="M’inscrire au concours" />
+      </div>
+    </form>
   </main>
   <!-- Footer -->
   <footer class="footer">
