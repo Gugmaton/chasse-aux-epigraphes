@@ -15,6 +15,7 @@
 * DIV ANIMATION
 * SECTION INTRO
 * BOUTON POUR DÉMARRER LE JEU
+* SECTEUR ARTS VISUELS
 */
 
 /* DIV ANIMATION */
@@ -94,7 +95,6 @@ margin: 0 auto;
     margin-right: 18px;
   
 }
-
 /* BOUTON POUR DÉMARRER LE JEU */
 .bouton__commencer{
     display: flex;
@@ -130,6 +130,14 @@ margin: 0 auto;
     background-color: #F1DB32;
     color: #02132B;
     border: solid #02132B 5px;
+ }
+
+ /* SECTEUR ARTS VISUELS */
+ h1{
+    display: flex;
+    justify-content: center;
+    color: rebeccapurple;
+    
  }
 
 
