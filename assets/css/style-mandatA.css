@@ -10,6 +10,7 @@
 @import url(typo.css);
 @import url(menu.css);
 @import url(header-footer.css);
+
 /*
 * DIV ANIMATION
 * SECTION INTRO
@@ -29,15 +30,12 @@ margin: 0 auto;
 }
 @media (min-width:600px){
     video {
-        width: 100%;
-        
-        
+        width: 100%; 
     }
 }
 @media (min-width:800px){
     video {
-        width: 100%;
-        
+        width: 100%;    
     }
 }
 @media (min-width:800px){
@@ -49,10 +47,8 @@ margin: 0 auto;
     }
 }
 
-/* paragraphe animation */
-
-
 /* SECTION INTRO */
+
 /* section introduction */
 .introduction{
     margin-top: 75px;
@@ -60,7 +56,7 @@ margin: 0 auto;
 @media (min-width:800px){
     .introduction {
     width: 90%;
-    margin-left: 200px;    
+    margin: 75px auto auto auto;
     }
 }
 /* image de l'introduction */
@@ -117,7 +113,6 @@ margin: 0 auto;
 @media (min-width:600px){
      .btn__commencer{
        width: 410px;
-      
     }
 }
 @media (min-width:800px){
