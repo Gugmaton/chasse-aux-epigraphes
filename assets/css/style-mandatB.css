@@ -7,6 +7,8 @@
 @import url(utilitaires.css);
 @import url(base.css);
 @import url(typo.css);
+@import url(header-footer.css);
+@import url(menu.css);
 
 .main {
     text-align: center;
