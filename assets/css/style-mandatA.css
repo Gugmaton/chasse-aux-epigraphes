@@ -9,53 +9,12 @@
 @import url(base.css);
 @import url(typo.css);
 @import url(menu.css);
+@import url(header-footer.css);
 /*
-* BODY
-* HEADER
 * DIV ANIMATION
 * SECTION INTRO
-*
-*
-*
 * BOUTON POUR DÉMARRER LE JEU
-* FOOTER
-*
-*
 */
-
-/* BODY */
-.body{
-    background-color: #F1F3FB;
-}
-
-/* HEADER */
-/* svg */
-@media (min-width:600px){
-    svg {
-        width: 500px;
-        margin-top: 20px;
-        margin-left: 100px; 
-        margin-bottom: 25px; 
-    }
-}
-@media (min-width:800px){
-    svg {
-        width: 500px;
-        margin-top: 20px;
-        margin-left: 100px; 
-        margin-bottom: 25px; 
-    }
-}
-
-.header{
-    background-color: #2D3540;
-}
-/* nav */
-@media (min-width:600px){
-    .nav {
-        margin-left: 100px;
-    }
-}
 
 /* DIV ANIMATION */
 .div__animation{
@@ -177,68 +136,6 @@ margin: 0 auto;
     color: #02132B;
     border: solid #02132B 5px;
  }
-
-/* FOOTER */
-/* icônes réseaux sociaux */
-.social {
-    text-align: center;
-  }
-
-  .social-menu {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    text-align: center;
-    padding-left: 0;
-  }
-  .social-menu__lien {
-    display: block;
-    width: 30px;
-    height: 30px;
-    margin: 0 6px;
-    background-repeat: no-repeat;
-    font-size: 0;
-    opacity: 1;
-    background-image: url(//hautemontagne.ca/sources/sprite-sociaux.png);
-    transition: transform .2s ease;
-  }
-  .social-menu__item:first-child .social-menu__lien:link {
-    background-position: -185px -10px;
-  }
-  .social-menu__item:nth-child(2) .social-menu__lien:link {
-    background-position: -185px -46px;
-  }
-  .social-menu__item:nth-child(3) .social-menu__lien:link {
-    background-position: -185px -82px;
-  }
-  .social-menu__item:nth-child(4) .social-menu__lien:link {
-    background-position: -185px -226px;
-  }
-  .social-menu__item:first-child .social-menu__lien:hover {
-    background-position: -423px -10px;
-    transform: scale(1.07) rotate(10deg);
-  }
-  .social-menu__item:nth-child(2) .social-menu__lien:hover {
-    background-position: -423px -46px;
-    transform: scale(1.07) rotate(10deg);
-  }
-  .social-menu__item:nth-child(3) .social-menu__lien:hover {
-    background-position: -423px -82px;
-    transform: scale(1.07) rotate(10deg);
-  }
-  .social-menu__item:nth-child(4) .social-menu__lien:hover {
-    background-position: -423px -226px;
-    transform: scale(1.07) rotate(10deg);
-  }
-.footer{
-    background-color: #2D3540;
-    padding-bottom: 30px;
-}
-.p__footer{
-    text-align: center;
-    color: white;
-    
-}
 
 
 
