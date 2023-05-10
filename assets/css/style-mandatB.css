@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/**
+ * @author: Gugmaton
+ */
+
+@import url(normalize.css);
+@import url(utilitaires.css);
+@import url(base.css);
+@import url(typo.css);
+
+.main {
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.titre {
+    text-align: left;
+    color: #595322;
+}
+
+.sous-titre, .menuFiltre, .nom__personnage {
+    color: #2D3540;
+}
+
+@media (min-width: 1000px) {
+    .sous-titre {
+        text-align: left;
+    }
+
+    .sous-titre {
+        margin-left: 85px;
+    }
+}
+
+.menuFiltre {
+    list-style: none;
+    padding: 0;
+}
+
+@media (min-width: 700px) {
+    .menuFiltre {
+        display: flex;
+        justify-content: start;
+        margin-left: 85px;
+    }
+
+    .menuFiltre__item {
+        padding: 0 20px;
+    }
+
+    .menuFiltre__item:first-child {
+        padding-left: 0;
+    }
+}
+
+.personnages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.lien__personnage {
+    text-decoration: none;
+    color: black;
+}
+
+.fiche {
+    display: inline-block;
+    width: fit-content;
+    margin: 0 10px;
+    margin-top: 20px;
+    height: 320px;
+}
+
+.picture__image {
+    display: flex;
+    justify-content: center;
+}
+
+.image__personnage {
+    width: 235px;
+    height: 235px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.nom__personnage {
+    max-width: 235px;
+    text-align: center;
+}

@@ -1,1 +1,136 @@
-/* MAXIME LEBRUN */
+@charset "UTF-8";
+/**
+ * @author: maxamax2
+ */
+
+/* IMPORTER LES FICHIERS CSS */
+@import url(normalize.css);
+@import url(utilitaires.css);
+@import url(base.css);
+@import url(typo.css);
+@import url(menu.css);
+@import url(header-footer.css);
+
+/*
+* DIV ANIMATION
+* SECTION INTRO
+* BOUTON POUR DÉMARRER LE JEU
+*/
+
+/* DIV ANIMATION */
+.div__animation{
+width: 80%;
+margin: 0 auto;
+
+}
+.video{
+    display: block;
+    width: 100%;
+   
+}
+@media (min-width:600px){
+    video {
+        width: 100%; 
+    }
+}
+@media (min-width:800px){
+    video {
+        width: 100%;    
+    }
+}
+@media (min-width:800px){
+    svg {
+        width: 500px;
+        margin-top: 20px;
+        margin-left: 100px; 
+        margin-bottom: 25px; 
+    }
+}
+
+/* SECTION INTRO */
+
+/* section introduction */
+.introduction{
+    margin-top: 75px;
+}
+@media (min-width:800px){
+    .introduction {
+    width: 90%;
+    margin: 75px auto auto auto;
+    }
+}
+/* image de l'introduction */
+.img__intro{
+    display: flex;
+    justify-content: center;
+}
+
+/* div qui englobe tous les éléments */
+@media (min-width:800px){
+    .intro__div {
+       display: flex;
+       justify-content: center;
+    }
+}
+/* div qui englobe tous les paragraphes */
+@media (min-width:600px){
+    .p__div {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+}
+@media (min-width:800px){
+    .p__div {
+    width: 50%;
+    margin: 0;
+    margin-top: -20px;
+    }
+}
+/* paragraphes d'intro */
+.p__intro{
+    display: flex;
+    text-align: justify;
+    margin-left: 18px;
+    margin-right: 18px;
+  
+}
+
+/* BOUTON POUR DÉMARRER LE JEU */
+.bouton__commencer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.btn__commencer{
+    background-color: #F1DB32;
+    color: #02132B;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+}
+@media (min-width:600px){
+     .btn__commencer{
+       width: 410px;
+    }
+}
+@media (min-width:800px){
+     .btn__commencer{
+        height: 65px;
+        width: 490px;
+    }
+}
+.btn__commencer:hover{
+    background-color: white;
+    color: #02132B;
+    box-shadow: 5px 5px #F1DB32;
+}
+.btn_demarrer:focus{
+    background-color: #F1DB32;
+    color: #02132B;
+    border: solid #02132B 5px;
+ }
+
+
+
