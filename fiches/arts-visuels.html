@@ -9,11 +9,11 @@
     <meta name="keywords" content="Énigma, chasse, épigraphes, données ouvertes, Chasse aux épigraphes, personnages historiques">
     <meta name="author" content="Énigma & le programme Techniques d’intégration multimédia du Cégep de Sainte-Foy">
     <title>Arts Visuels</title>
-    <link rel="stylesheet" href="../assets/css/style-mandatA.css">
+    <link rel="stylesheet" href="../assets/css/secteur-arts-visuels.css">
     <script defer src="../js/menu.js"></script>
     <!-- MAXIME LEBRUN -->
 </head>
-<body>
+<body class="arts-visuels">
     <noscript>
         <p>Pour apprécier pleinement ce site, votre navigateur doit disposer de JavaScript, ce qui ne semble pas être le cas
             présentement. Alternativement, vous pouvez consulter le site de la Ville de Québec pour découvrir les épigraphes
@@ -195,19 +195,23 @@
         </nav>
       </header>
       <main>
-        <section>
-            <h1><span id="prenom">Edmund</span><span id="nom">Alleyn</span></h1>
-            <p>Arts visuels</p>
-            <figure>
-                <img src="../images/alleyn.jpg" alt=" " id="url_image">
+        <div class="conteneur">
+
+       
+        <h1><span id="prenom">Edmund</span> <span id="nom">Alleyn</span></h1>
+        <p class="secteur__activite">Arts visuels</p>
+
+        <div class="conteneur__bio">
+            <figure class="image__bio">
+                <img src="../assets/images/e0001_155.png" alt="Image d'une personne historique" id="url_image">
                 <figcaption>
                     <span id="titre_image">Edmund Alleyn dans son atelier</span> <br>
                     ©<span id="credit_image">Gabor Szilasi</span>
                 </figcaption>
             </figure>
-            <h2>Notes biographiques</h2>
-            <div id="notes_biographiques">
-                <p>
+            <div id="notes_biographiques" class="texte__bio">
+              <h2>Notes biographiques</h2>
+                <p class="p__bio">
                     Edmund Alleyn est né à Québec en 1931. Il est un artiste peintre. Edmund Alleyn a étudié à l'école des
                     beaux-arts de Québec, auprès de Jean-Paul Lemieux et Jean Dallaire. Il séjourne en France de 1955 à
                     1970.
@@ -219,35 +223,36 @@
                     et à New York.
                 </p>
             </div>
-        </section>
-        <section>
+        </div>
+        
+        <section class="section__localisation">
             <h2>Localisation</h2>
             <figure>
-                <img src="../images/zoomgooglemap_alleyn.png" alt="Plan rapproché de l'emplacement sur la carte géographique"
+                <img src="../assets/images/05_zoomGoogle_maps/e0001-zoom-google-maps.png" alt="Plan rapproché de l'emplacement sur la carte géographique"
                     id="carteZoom">
                 <figcaption>
                     <h3>Arrondissement:
-                        <span id="arrondissement">La Cité-Limoilou</span>
+                        <span id="arrondissement" class="infos__localisation">La Cité-Limoilou</span>
                     </h3>
                     <h3>Quartier:
-                        <span id="quartier">Vieux-Québec/Cap-Blanc/Colline parlementaire</span>
+                        <span id="quartier" class="infos__localisation">Vieux-Québec/Cap-Blanc/Colline parlementaire</span>
                     </h3>
                     <h3>Adresse:
-                        <span id="adresse">85, rue Wilfrid-Laurier</span>
+                        <span id="adresse" class="infos__localisation">85, rue Wilfrid-Laurier</span>
                     </h3>
                 </figcaption>
             </figure>
         </section>
-        <section>
+        <section class="section__commemoratif">
             <h2>Plaque commémorative</h2>
             <figure>
-                <img src="../images/plaque_alleyn.png" alt="Épigraphe de Edmund Alleyn" id="url_plaque">
+                <img src="../assets/images/02_Epigraphes/e0001_alleyn_plaque.jpg" alt="Épigraphe de Edmund Alleyn" id="url_plaque">
                 <figcaption id="transcript">Ici vécut Edmund Alleyn(1931-2004). Peintre et artiste polyvalent, créateur
                     d'une oeuvre originale et en constante mutation.
                 </figcaption>
             </figure>
         </section>
-        <section>
+        <section class="section__sonore">
             <h2>Capsule sonore</h2>
             <p id="audio_desc"></p>
             <audio controls id="audio_url">
@@ -257,12 +262,18 @@
             </audio>
             <h3>Transcription textuelle</h3>
             <p id="audio_preambule">Tout jeune, le peintre Edmund Alleyn vivait près du fleuve. L’eau, la lumière, les voyages ont nourri son imagination. Esprit libre, il explorait toutes les formes d’expression. Allons à la rencontre de cet artiste qui était en avance sur son temps.</p>
-            <p id="audio_transcription">Mon père est né en 1931 à Québec de parents moitié irlandais, moitié anglais donc vraiment la souche anglophone du Québec...</p>
+            <p id="audio_transcription" class="audio_transcription">Mon père est né en 1931 à Québec de parents moitié irlandais, moitié anglais donc vraiment la souche anglophone du Québec...
+              Mon père est né en 1931 à Québec de parents moitié irlandais, moitié anglais donc vraiment la souche anglophone du Québec...
+              Mon père est né en 1931 à Québec de parents moitié irlandais, moitié anglais donc vraiment la souche anglophone du Québec...
+              Mon père est né en 1931 à Québec de parents moitié irlandais, moitié anglais donc vraiment la souche anglophone du Québec...
+              Mon père est né en 1931 à Québec de parents moitié irlandais, moitié anglais donc vraiment la souche anglophone du Québec...
+            </p>
             <h3>Crédits de la narration</h3>
             <p id="audio_credit">Jennifer Alleyn est cinéaste. Elle s’investit dans la transmission de
                 l’œuvre de son père, entre autres par la publication d’un site Internet et la réalisation de
                 documentaires.</p>
-        </section>
+        </section> 
+      </div>
     </main>
       <footer class="footer">
         <section class="social">
