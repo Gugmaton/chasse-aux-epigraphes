@@ -27,4 +27,13 @@ function filtrer() {
             fiche.classList.add('selection')
         }
     });
+    activerFiltre(this);
+}
+
+function activerFiltre(bouton) {
+    arrBtnFiltres.forEach(function (btnFiltre) {
+        btnFiltre.classList.remove("filtres__bouton--actif");
+    });
+
+    bouton.classList.add("filtres__bouton--actif");
 }
