@@ -10,6 +10,11 @@
 @import url(header-footer.css);
 @import url(menu.css);
 
+/* Classe pour les filtres */
+.selection {
+    order: -1;
+}
+
 .main {
     text-align: center;
     max-width: 1000px;
@@ -56,7 +61,12 @@
     }
 }
 
-.personnages {
+.filtres__bouton {
+    border: none;
+    background-color: white;
+}
+
+.listePersonnages {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
