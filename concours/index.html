@@ -13,6 +13,7 @@
   <title>Chasse aux épigraphes</title>
   <link rel="stylesheet" href="../assets/css/style-mandatD.css">
   <script defer src="../js/menu.js"></script>
+  <script defer src="../js/app.js"></script>
 </head>
 
 <body class="body">
@@ -206,12 +207,12 @@
         <legend>
           <h2>Inscription au concours</h2>
         </legend>
-        <div class="field">
+        <div class="field field-large">
           <label for="first-name">Prénom</label>
           <input id="first-name" type="text" name="first-name" required />
           <div id="first-name-required" class="error">Le prénom est requis.</div>
         </div>
-        <div class="field">
+        <div class="field field-large">
           <label for="last-name">Nom</label>
           <input id="last-name" type="text" name="last-name" required />
           <div id="last-name-required" class="error">Le nom est requis.</div>
@@ -219,16 +220,16 @@
       </fieldset>
       <fieldset>
         <div class="field field-large">
-          <label for="email">Adresse</label>
-          <input id="email" type="text" name="email" required />
-          <div id="email-required" class="error">L'adresse est requise.</div>
-          <div id="email-invalid" class="error">L'adresse est invalide.</div>
+          <label for="adresse">Adresse</label>
+          <input id="adresse" type="text" name="email" required />
+          <div id="adresse-required" class="error">L'adresse est requise.</div>
+          <div id="adresse-invalid" class="error">L'adresse est invalide.</div>
         </div>
         <div class="field field-large">
-          <label for="zip-code">Ville</label>
-          <input id="zip-code" type="text" name="zip-code" required />
-          <div id="zip-code-required" class="error">La ville est requis.</div>
-          <div id="zip-code-invalid" class="error">La ville est invalide.</div>
+          <label for="ville">Ville</label>
+          <input id="ville" type="text" name="zip-code" required />
+          <div id="ville-required" class="error">La ville est requis.</div>
+          <div id="ville-invalid" class="error">La ville est invalide.</div>
         </div>
         <div class="field field-large">
           <label for="province">Province</label>
@@ -255,10 +256,10 @@
           <div id="zip-code-invalid" class="error">Le code postal est invalide.</div>
         </div>
         <div class="field field-large">
-          <label for="zip-code">Téléphone</label>
-          <input id="zip-code" type="text" name="zip-code" required />
-          <div id="zip-code-required" class="error">Le téléphone est requis.</div>
-          <div id="zip-code-invalid" class="error">Le téléphone est invalide.</div>
+          <label for="telephone">Téléphone</label>
+          <input id="telephone" type="text" name="zip-code" required />
+          <div id="telephone-required" class="error">Le téléphone est requis.</div>
+          <div id="telephone-invalid" class="error">Le téléphone est invalide.</div>
         </div>
         <div class="field field-large">
           <label for="email">Adresse de courriel</label>
@@ -277,6 +278,7 @@
         <div class="reglement">
           <input type="checkbox" name="acceptationReglement" id="acceptationReglement" required />
           <label for="acceptationReglement"> J'ai lu et j'accepte le règlement</label>
+          <div id="checkbox-required" class="error">Vous devez accepter le règlement</div>
         </div>
       </fieldset>
       <div>
