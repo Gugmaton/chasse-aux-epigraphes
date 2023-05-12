@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/**
+ * @author: maxamax2
+ */
+
+/* IMPORTER LES FICHIERS CSS */
+@import url(normalize.css);
+@import url(utilitaires.css);
+@import url(base.css);
+@import url(typo.css);
+@import url(grille.css);
+@import url(menu.css);
+@import url(header-footer.css);
+
+/*
+* SECTEUR ARTS VISUELS
+* TITRES
+* BACKGROUND IMAGE
+* SECTION NOTES BIOGRAPHIQUES
+* SECTION LOCALISATION
+* SECTION PLAQUE COMMÉMORATIVE
+* SECTION CAPSULE SONORE
+*/
+
+/* TITRES */
+h1{
+    display: flex;
+    justify-content: center;
+    color: #595322;
+ }
+h2{
+   color: #595322;
+}
+h3{
+   color: #595322;
+}
+/* BACKGROUND IMAGE */
+.arts-visuels{
+   background-image: url(../images/artsVisuelsBackground.jpg);
+   background-position: center;
+}
+ section p{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    margin: auto;
+ }
+ img{
+    width: 300px;
+ }
+ .secteur__activite{
+   text-align: center;
+   font-size: 2.0em;
+ }
+
+ /* SECTION NOTES BIOGRAPHIQUES */
+.notes__bio{
+   text-align: center;
+}
+@media (min-width:600px){
+   .conteneur__bio{
+     display: flex;
+     margin: auto;
+  }
+  .image__bio{
+   width: 30%;
+  }
+  .texte__bio{
+   width: 70%;
+   margin-top: -30px;
+  }
+}
+ /* SECTION LOCALISATION */
+.section__localisation{
+   text-align: center;
+}
+.infos__localisation{
+   color: black;
+}
+ /* SECTION PLAQUE COMMÉMORATIVE */
+.section__commemoratif{
+   text-align: center;
+}
+ /* SECTION CAPSULE SONORE */
+.section__sonore{
+   text-align: center;
+   margin-bottom: 50px;
+}
+/* .audio_transcription{
+   overflow: auto;
+   width: 80%;
+   height: 150px;
+} */
+
+
+/* @media (min-width:800px){
+   .btn__commencer{
+     
+  }
+} */
+
