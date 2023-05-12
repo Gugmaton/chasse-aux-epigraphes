@@ -51,6 +51,80 @@
     }
 }
 
+/* BODY */
+
+main{
+  padding: 30px;
+  margin: 10px;
+}
+@media (min-width:600px){
+  .main{
+    padding: 30px;
+    margin: 10px;
+  }
+}
+
+@media (min-width:800px){
+  .main{
+    padding: 30px;
+    margin: 10px;
+  }
+}
+
+.titre{
+  margin-left: 5%;
+  color: #595322;
+  
+}
+
+.texte{
+  margin-left: 5%;
+}
+
+.regles{
+  margin-left: 7%;
+}
+
+fieldset{
+  background-color: #2D3540;
+  color: white;
+}
+
+.chasse_pigee{
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "div1 div2 div2 div3 "
+    "suggestion1 suggestion1 suggestion2 suggestion2";
+  text-align: center;
+}
+
+.div1 {
+  grid-area: div1;
+}
+.div2 {
+  grid-area: div2;
+}
+.div3 {
+  grid-area: div3;
+}
+.suggestion1 {
+  grid-area: suggestion1;
+}
+.suggestion2 {
+  grid-area: suggestion2;
+}
+
+.piger_chasse{
+  
+}
 /* FOOTER */
 /* icônes réseaux sociaux */
 .social {
