@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/**
+ * @author: Sharpchel94
+ */
+
+/* IMPORTER LES FICHIERS CSS */
+@import url(normalize.css);
+@import url(utilitaires.css);
+@import url(base.css);
+@import url(typo.css);
+@import url(menu.css);
+@import url(header-footer.css);
+/**
+* BODY
+* SVG
+* HEADER
+* NAV
+* FOOTER
+**/
+
+/* CONCOURS */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #5683af;
+  --color-primary-lighter: #d0e1f3;
+  --color-primary-lightest: #dfeaf5;
+
+  --color-background: #efefef;
+  --color-danger: #dc3545;
+  --color-muted: #aaa;
+
+  --color-text: #444;
+  --color-text-heading: #4975a2;
+
+  --border-radius: 5px;
+}
+
+body {
+  
+  margin: 0;
+  padding: 2rem;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--color-background);
+
+  color: var(--color-text);
+  font-family: sans-serif;
+}
+
+.form {
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid var(--color-primary);
+  color: var(--color-text-heading);
+}
+
+.form header {
+  text-align: center;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.form footer {
+  margin: 0 3rem 2rem 3rem;
+}
+
+.form fieldset {
+  display: grid;
+  margin: 1.5rem 3rem;
+  padding: 0;
+  gap: 1rem 1.5rem;
+  grid-template-columns: 1fr 1fr;
+
+  border: none;
+}
+
+.form legend {
+  width: 100%;
+  padding: 0;
+  grid-column: 1  / span 2;
+}
+
+.form legend h2 {
+  margin: 0 0 0.5rem 0;
+
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.form .field-large {
+  grid-column: 1  / span 0;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.5rem;
+
+  color: #444;
+  font-size: 1.5rem;
+}
+
+.form input {
+  display: block;
+  width: 100%;
+
+  border: 1px solid var(--color-muted);
+  border-radius: var(--border-radius);
+}
+
+.form input[type="text"] {
+  padding: 0.5rem;
+}
+
+.form input[type="text"].invalid {
+  border-color: var(--color-danger);
+}
+
+.form input[type="submit"] {
+  width: 100%;
+  padding: 0.5rem;
+
+  background: var(--color-primary-lightest);
+}
+
+.form input[type="submit"]:hover {
+  background: var(--color-primary-lighter);
+}
+
+.form .error {
+  display: none;
+  margin-top: 0.5rem;
+
+  color: var(--color-danger);
+  font-size: 0.8rem;
+}
+
+.form .error.visible {
+  display: block;
+}
