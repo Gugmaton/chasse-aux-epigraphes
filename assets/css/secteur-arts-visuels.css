@@ -39,6 +39,7 @@ h3{
    background-image: url(../images/artsVisuelsBackground.jpg);
    background-position: center;
 }
+/* Quelques utilitaires */
  section p{
     display: flex;
     justify-content: center;
@@ -55,9 +56,17 @@ h3{
  }
 
  /* SECTION NOTES BIOGRAPHIQUES */
-.notes__bio{
-   text-align: center;
+
+@media (max-width:600px){
+   .titre__bio{
+      text-align: center;
+   }
+   .p__bio{
+      margin-left: 10px;
+      margin-right: 10px;
+   }
 }
+
 @media (min-width:600px){
    .conteneur__bio{
      display: flex;
@@ -75,28 +84,49 @@ h3{
 .section__localisation{
    text-align: center;
 }
-.infos__localisation{
+.span__localisation{
    color: black;
+}
+@media (min-width:600px){
+   .conteneur__plaque-localisation{
+     display: flex;
+     margin: auto;
+  }
+  .section__localisation{
+   width: 50%;
+   margin-top: -1px;
+  }
+  .section__commemoratif{
+   width: 50%;
+  }
+}
+.infos__localisation{
+   color: #595322;
+   font-size: 1.2em;
 }
  /* SECTION PLAQUE COMMÉMORATIVE */
 .section__commemoratif{
    text-align: center;
 }
  /* SECTION CAPSULE SONORE */
-.section__sonore{
-   text-align: center;
-   margin-bottom: 50px;
+ @media (max-width:600px){
+   .div__sonore{
+      margin-left: 10px;
+      margin-right: 10px;
+   }
+   
 }
-/* .audio_transcription{
-   overflow: auto;
-   width: 80%;
-   height: 150px;
-} */
-
-
-/* @media (min-width:800px){
-   .btn__commencer{
-     
+ @media (min-width:600px){
+   .div__sonore{
+     display: flex;
+     margin: auto;
+     margin-bottom: 50px;
   }
-} */
-
+  .audio{
+   width: 60%;
+  }
+  .texte__audio{
+   width: 40%;
+   margin-top: 10px;
+  }
+}
