@@ -7,6 +7,13 @@
 @import url(utilitaires.css);
 @import url(base.css);
 @import url(typo.css);
+@import url(header-footer.css);
+@import url(menu.css);
+
+/* Classe pour les filtres */
+.selection {
+    order: -1;
+}
 
 .main {
     text-align: center;
@@ -54,7 +61,12 @@
     }
 }
 
-.personnages {
+.filtres__bouton {
+    border: none;
+    background-color: white;
+}
+
+.listePersonnages {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
