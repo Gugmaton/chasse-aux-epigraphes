@@ -11,9 +11,6 @@ arrBtnFiltres.forEach(function (btnFiltre) {
     btnFiltre.addEventListener('click', filtrer);
 });
 
-console.log
-
-
 /* Fonctions */
 function filtrer() {
     let filtreSecteur = this.dataset.secteur;
