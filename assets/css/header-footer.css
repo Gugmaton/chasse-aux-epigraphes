@@ -11,17 +11,11 @@
 @import url(menu.css);
 
 /**
-* BODY
 * SVG
 * HEADER
 * NAV
 * FOOTER
 **/
-
-/* BODY */
-.body{
-    background-color: #F1F3FB;
-}
 
 /* svg */
 @media (min-width:600px){
