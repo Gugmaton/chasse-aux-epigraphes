@@ -1,5 +1,5 @@
-document.getElementById('first-name').addEventListener('blur', validerChampNom);
-document.getElementById('last-name').addEventListener('blur', validerChampPrenom);
+document.getElementById('first-name').addEventListener('blur', validerChampPrenom);
+document.getElementById('last-name').addEventListener('blur', validerChampNom);
 document.getElementById('adresse').addEventListener('blur', validerAdresse);
 document.getElementById('ville').addEventListener('blur', validerVille);
 document.getElementById('zip-code').addEventListener('blur', validerCodePostale);
@@ -7,92 +7,135 @@ document.getElementById('telephone').addEventListener('blur', validerTelephone);
 document.getElementById('email').addEventListener('blur', validerCourriel);
 document.getElementById('acceptationReglement').addEventListener('blur', validerCheckbox);
 
+/*AVERTISSEMENT ICONE*/
+const strIconeAvertissement = `<span>
+    <span class="screen-reader-only">Avertissement</span>
+    <span class="icone icone--erreur" aria-hidden="true"></span>
+</span>`;
 
-function validerChampNom(objEvenement) {
-    const expCode = /[A-Za-z]+/;
-    let erreurPrenom = document.getElementById("first-name-required");
-    const refCible = objEvenement.currentTarget;
-    if (!expCode.test(refCible.value)) {
-        erreurPrenom.classList.remove("error");
-    }
-    if (expCode.test(refCible.value)) {
-        erreurPrenom.innerHTML = "";
-    }
-}
+/**
+  * Valide le champ prénom à partir de l'attribut HTML pattern appliqué sur le <input>
+  * @param {FocusEvent} objEvenement 
+  */
 function validerChampPrenom(objEvenement) {
-    const expCode = /[A-Za-z]+/;
-    let erreurNom = document.getElementById("last-name-required");
-    const refCible = objEvenement.currentTarget;
-    if (!expCode.test(refCible.value)) {
-        erreurNom.classList.remove("error");
+    const RefCible = objEvenement.currentTarget;
+    console.log(RefCible);
+    const strMotif = RefCible.pattern;
+    const regex = new RegExp(`^${strMotif}$`);
+    const blnValide = regex.test(RefCible.value);
+    if (RefCible.value === "") {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].motif;
     }
-    if (expCode.test(refCible.value)) {
-        erreurNom.innerHTML = "";
+    else if (blnValide === false) {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].mauvais;
+    }
+    else {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = "";
+    }
+
+
+}
+function validerChampNom(objEvenement) {
+    const RefCible = objEvenement.currentTarget;
+    console.log(RefCible);
+    const strMotif = RefCible.pattern;
+    const regex = new RegExp(`^${strMotif}$`);
+    const blnValide = regex.test(RefCible.value);
+    if (RefCible.value === "") {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].motif;
+    }
+    else if (blnValide === false) {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].mauvais;
+    }
+    else {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = "";
     }
 }
 function validerAdresse(objEvenement) {
-    const ADRESSE_REGEX = /[0-9]{1,4} [A-Za-z]/;
-    let erreurEmail = document.getElementById("adresse-required");
-    const refCible = objEvenement.currentTarget;
-    if (!ADRESSE_REGEX.test(refCible.value)) {
-        erreurEmail.classList.remove("error");
+    const RefCible = objEvenement.currentTarget;
+    console.log(RefCible);
+    const strMotif = RefCible.pattern;
+    const regex = new RegExp(`^${strMotif}$`);
+    const blnValide = regex.test(RefCible.value);
+    if (RefCible.value === "") {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].motif;
     }
-    if (ADRESSE_REGEX.test(refCible.value)) {
-        erreurEmail.innerHTML = "";
+    else if (blnValide === false) {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].mauvais;
+    }
+    else {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = "";
     }
 }
 function validerVille(objEvenement) {
-    const VILLE_REGEX = /[A-Za-z]{4}/;
-    let erreurEmail = document.getElementById("ville-required");
-    const refCible = objEvenement.currentTarget;
-    if (!VILLE_REGEX.test(refCible.value)) {
-        erreurEmail.classList.remove("error");
+    const RefCible = objEvenement.currentTarget;
+    console.log(RefCible);
+    const strMotif = RefCible.pattern;
+    const regex = new RegExp(`^${strMotif}$`);
+    const blnValide = regex.test(RefCible.value);
+    if (RefCible.value === "") {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].motif;
     }
-    if (VILLE_REGEX.test(refCible.value)) {
-        erreurEmail.innerHTML = "";
+    else if (blnValide === false) {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].mauvais;
+    }
+    else {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = "";
     }
 }
 function validerCodePostale(objEvenement) {
-    const postal = /[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]/;
-    let erreurPostal = document.getElementById("zip-code-required");
-    const refCible = objEvenement.currentTarget;
-    if (!postal.test(refCible.value)) {
-        erreurPostal.classList.remove("error");
+    const RefCible = objEvenement.currentTarget;
+    console.log(RefCible);
+    const strMotif = RefCible.pattern;
+    const regex = new RegExp(`^${strMotif}$`);
+    const blnValide = regex.test(RefCible.value);
+    if (RefCible.value === "") {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].motif;
     }
-    if (postal.test(refCible.value)) {
-        erreurPostal.innerHTML = "";
+    else if (blnValide === false) {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].mauvais;
+    }
+    else {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = "";
     }
 }
 function validerTelephone(objEvenement) {
-    const TELEPHONE_REGEX = /^(\+\d{1,2}\s)?\(?\d{3}\)?\d{3}\d{4}$/;
-    let erreurPostal = document.getElementById("telephone-required");
-    const refCible = objEvenement.currentTarget;
-    if (!TELEPHONE_REGEX.test(refCible.value)) {
-        erreurPostal.classList.remove("error");
+    const RefCible = objEvenement.currentTarget;
+    console.log(RefCible);
+    const strMotif = RefCible.pattern;
+    const regex = new RegExp(`^${strMotif}$`);
+    const blnValide = regex.test(RefCible.value);
+    if (RefCible.value === "") {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].motif;
     }
-    if (TELEPHONE_REGEX.test(refCible.value)) {
-        erreurPostal.innerHTML = "";
+    else if (blnValide === false) {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].mauvais;
+    }
+    else {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = "";
     }
 }
 function validerCourriel(objEvenement) {
-    const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    let erreurEmail = document.getElementById("email-required");
-    const refCible = objEvenement.currentTarget;
-    if (!EMAIL_REGEX.test(refCible.value)) {
-        erreurEmail.classList.remove("error");
+    const RefCible = objEvenement.currentTarget;
+    console.log(RefCible);
+    const strMotif = RefCible.pattern;
+    const regex = new RegExp(`^${strMotif}$`);
+    const blnValide = regex.test(RefCible.value);
+    if (RefCible.value === "") {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].motif;
     }
-    if (EMAIL_REGEX.test(refCible.value)) {
-        erreurEmail.innerHTML = "";
+    else if (blnValide === false) {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + objJSONMessagesErreur[RefCible.id].mauvais;
+    }
+    else {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = "";
     }
 }
 function validerCheckbox(objEvenement) {
-    let erreurEmail = document.getElementById("checkbox-required");
-    const refCible = objEvenement.currentTarget;
-    if (refCible.checked === false) {
-        erreurEmail.classList.remove("error");
-    }
-    if (refCible.checked === true) {
-        erreurEmail.innerHTML = "";
+    const RefCible = objEvenement.currentTarget;
+    const strMotif = RefCible.pattern;
+    if (RefCible.checked === false) {
+        RefCible.closest('.field').querySelector('.messageErreur').innerHTML = strIconeAvertissement + "Veuillez accepter le règlement";
     }
 }
 
