@@ -13,12 +13,8 @@
   <title>Chasse aux épigraphes</title>
   <link rel="stylesheet" href="../assets/css/style-mandatD.css">
   <script defer src="../assets/js/menu.js"></script>
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon_chasse/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon_chasse/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images//favicon_chasse/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
+  <script defer src="../assets/js/app.js"></script>
+  <script defer src="../assets/js/messagesErreur.js"></script>
 </head>
 
 <body class="body">
@@ -194,8 +190,8 @@
       </ul>
     </nav>
   </header>
-  <main id="contenu">
-    <h1>Courez la chance de gagner un forfait pour deux à l’Auberge des Illustres voisins incluant</h1>
+  <main>
+    <h1 class="titre">Courez la chance de gagner un forfait pour deux à l’Auberge des Illustres voisins incluant</h1>
     <h2>- Le souper à la carte</h2>
     <h2>- La nuitée à l’Auberge</h2>
     <h2>- Le petit-déjeuner à la carte</h2>
@@ -210,29 +206,31 @@
         <legend>
           <h2>Inscription au concours</h2>
         </legend>
-        <div class="field">
+        <div class="field field-large">
           <label for="first-name">Prénom</label>
-          <input id="first-name" type="text" name="first-name" required />
-          <div id="first-name-required" class="error">Le prénom est requis.</div>
+          <input id="first-name" type="text" name="first-name" required pattern="[A-ZÇÀ-Ÿa-z][a-zA-ZÀ-ÿ '\-]{1,29}" />
+          <div id="first-name-required" ></div>
+          <p class="messageErreur"></p>
         </div>
-        <div class="field">
+        <div class="field field-large">
           <label for="last-name">Nom</label>
-          <input id="last-name" type="text" name="last-name" required />
-          <div id="last-name-required" class="error">Le nom est requis.</div>
+          <input id="last-name" type="text" name="last-name" required pattern="[A-ZÇÀ-Ÿa-z][a-zA-ZÀ-ÿ '\-]{1,29}" />
+          <div id="last-name-required" class="error"></div>
+          <p class="messageErreur"></p>
         </div>
       </fieldset>
       <fieldset>
         <div class="field field-large">
-          <label for="email">Adresse</label>
-          <input id="email" type="text" name="email" required />
-          <div id="email-required" class="error">L'adresse est requise.</div>
-          <div id="email-invalid" class="error">L'adresse est invalide.</div>
+          <label for="adresse">Adresse</label>
+          <input id="adresse" type="text" name="email" required pattern="[0-9]{1,4} [A-Za-z]" />
+          <div id="adresse-required" class="error"></div>
+          <p class="messageErreur"></p>
         </div>
         <div class="field field-large">
-          <label for="zip-code">Ville</label>
-          <input id="zip-code" type="text" name="zip-code" required />
-          <div id="zip-code-required" class="error">La ville est requis.</div>
-          <div id="zip-code-invalid" class="error">La ville est invalide.</div>
+          <label for="ville">Ville</label>
+          <input id="ville" type="text" name="zip-code" required pattern="[A-Za-z]{4}" />
+          <div id="ville-required" class="error"></div>
+          <p class="messageErreur"></p>
         </div>
         <div class="field field-large">
           <label for="province">Province</label>
@@ -251,24 +249,25 @@
             <option value="nunavut">Nunavut </option>
             <option value="yukon">Yukon</option>
           </select>
+          <p class="messageErreur"></p>
         </div>
         <div class="field field-large">
           <label for="zip-code">Code postal</label>
-          <input id="zip-code" type="text" name="zip-code" required />
-          <div id="zip-code-required" class="error">Le code postal est requis.</div>
-          <div id="zip-code-invalid" class="error">Le code postal est invalide.</div>
+          <input id="zip-code" type="text" name="zip-code" required pattern="[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]" />
+          <div id="zip-code-required" class="error"></div>
+          <p class="messageErreur"></p>
         </div>
         <div class="field field-large">
-          <label for="zip-code">Téléphone</label>
-          <input id="zip-code" type="text" name="zip-code" required />
-          <div id="zip-code-required" class="error">Le téléphone est requis.</div>
-          <div id="zip-code-invalid" class="error">Le téléphone est invalide.</div>
+          <label for="telephone">Téléphone</label>
+          <input id="telephone" type="text" name="zip-code" required pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?\d{3}\d{4}$" />
+          <div id="telephone-required" class="error"></div>
+          <p class="messageErreur"></p>
         </div>
         <div class="field field-large">
-          <label for="email">Adresse de courriel</label>
-          <input id="email" type="text" name="email" required />
-          <div id="email-required" class="error">L'adresse courriel est requise.</div>
-          <div id="email-invalid" class="error">L'adresse courriel est invalide.</div>
+          <label for="email">Adresse courriel</label>
+          <input id="email" type="text" name="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" />
+          <div id="email-required" class="error"></div>
+          <p class="messageErreur"></p>
         </div>
       </fieldset>
       <fieldset>
@@ -278,9 +277,11 @@
         </div>
       </fieldset>
       <fieldset>
-        <div class="reglement">
+        <div class="field field-large">
           <input type="checkbox" name="acceptationReglement" id="acceptationReglement" required />
           <label for="acceptationReglement"> J'ai lu et j'accepte le règlement</label>
+          <div id="checkbox-required" class="error"></div>
+          <p class="messageErreur"></p>
         </div>
       </fieldset>
       <div>
