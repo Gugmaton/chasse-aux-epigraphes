@@ -27,6 +27,7 @@ margin: 0 auto;
 .video{
     display: block;
     width: 100%;
+    margin-top: 50px;
    
 }
 @media (min-width:600px){
