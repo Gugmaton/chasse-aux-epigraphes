@@ -12,10 +12,17 @@
   <meta name="author" content="Énigma & le programme Techniques d’intégration multimédia du Cégep de Sainte-Foy">
   <title>Chasse aux épigraphes</title>
   <link rel="stylesheet" href="assets/css/style-mandatA.css">
-  <script defer src="js/menu.js"></script>
+  <script defer src="assets/js/menu.js"></script>
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon_chasse/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon_chasse/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images//favicon_chasse/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body class="body">
+  <a href="#contenu" class="lienrapide screen-reader-only focusable">Allez au contenu</a>
   <header class="header">
     <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 343 67.7">
       <defs>
@@ -184,13 +191,11 @@
         <li class="nav__list-item">
           <a href="carte/index.html" class="nav__link">Carte</a>
         </li>
-        <li class="nav__list-item">
-          <a href="concours/index.html" class="nav__link">Coucours</a>
-        </li>
+        
       </ul>
     </nav>
   </header>
-  <main>
+  <main id="contenu">
     <!-- Changer pour une balise vidéo quand on aura choisi l'animation -->
     <figure class="div__animation">
       <video class="video" controls>
@@ -230,7 +235,7 @@
       </div>
     </section>
 
-    <div class="bouton__commencer"><button class="btn__commencer">Jouer à la chasse aux épigraphes</button></div>
+    <div class="bouton__commencer"><a href="chasse/index.html"><button class="btn__commencer">Jouer à la chasse aux épigraphes</button></a></div>
     <p><a href="fiches/arts-visuels.html">Page arts visuels</a></p>
   </main>
 
