@@ -18,7 +18,7 @@ const objFicheArtsVisuels = {
     intIdFicheCourante: obtenirValeurUrlParam('id'),
     refPrenom: document.getElementById("prenom"),
     refNom: document.getElementById("nom"),
-    refPremierP: document.querySelector("section p"),
+    refDomaine: document.getElementById("domaine"),
     refImageTitre: document.getElementById("titre_image"),
     refImageCredit: document.getElementById("credit_image"),
     refNoteBiographique: document.querySelector("#notes_biographiques p"),
@@ -32,9 +32,12 @@ const objFicheArtsVisuels = {
     refAudioCredit: document.getElementById("audio_credit"),
 
     initialiser: function () {
+        console.log(objJSONepigraphes);
+        console.log("allo");
+        // console.log(objJSONepigraphes[this.intIdFicheCourante].PRENOM);
         this.refPrenom.innerHTML = objJSONepigraphes[this.intIdFicheCourante].PRENOM + " ";
         this.refNom.innerHTML = objJSONepigraphes[this.intIdFicheCourante].NOM;
-        this.refPremierP.innerHTML = objJSONepigraphes[this.intIdFicheCourante].DOMAINE;
+        this.refDomaine.innerHTML = objJSONepigraphes[this.intIdFicheCourante].DOMAINE;
         this.refImageTitre.innerHTML = objJSONepigraphes[this.intIdFicheCourante].IMAGE.TITRE;
         this.refImageCredit.innerHTML = objJSONepigraphes[this.intIdFicheCourante].IMAGE.CREDIT;
         this.refNoteBiographique.innerHTML = objJSONepigraphes[this.intIdFicheCourante].BIOGRAPHIE;
