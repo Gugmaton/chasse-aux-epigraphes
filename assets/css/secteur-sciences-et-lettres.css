@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/**
+ * @author: maxamax2
+ */
+
+/* IMPORTER LES FICHIERS CSS */
+@import url(normalize.css);
+@import url(utilitaires.css);
+@import url(base.css);
+@import url(typo.css);
+@import url(grille.css);
+@import url(menu.css);
+@import url(header-footer.css);
+
+/*
+* SECTEUR ARTS VISUELS
+* TITRES
+* BACKGROUND IMAGE
+* SECTION NOTES BIOGRAPHIQUES
+* SECTION LOCALISATION
+* SECTION PLAQUE COMMÉMORATIVE
+* SECTION CAPSULE SONORE
+*/
+
+/* TITRES */
+h1{
+    display: flex;
+    justify-content: center;
+    color: #595322;
+ }
+h2{
+   color: #595322;
+}
+h3{
+   color: #595322;
+}
+/* BACKGROUND IMAGE */
+.arts-visuels{
+   background-image: url(../images/SciencesetlettresBackground.jpg);
+   background-position: center;
+}
+/* Quelques utilitaires */
+ section p{
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    margin: auto;
+ }
+ img{
+    width: 300px;
+    
+ }
+ .secteur__activite{
+   text-align: center;
+   font-size: 2.0em;
+ }
+
+ /* SECTION NOTES BIOGRAPHIQUES */
+
+@media (max-width:600px){
+   .titre__bio{
+      text-align: center;
+   }
+   .p__bio{
+      margin-left: 10px;
+      margin-right: 10px;
+   }
+}
+
+@media (min-width:600px){
+   .conteneur__bio{
+     display: flex;
+     margin: auto;
+  }
+  .image__bio{
+   width: 30%;
+  }
+  .texte__bio{
+   width: 70%;
+   margin-top: -30px;
+  }
+}
+ /* SECTION LOCALISATION */
+.section__localisation{
+   text-align: center;
+}
+.span__localisation{
+   color: black;
+}
+@media (min-width:600px){
+   .conteneur__plaque-localisation{
+     display: flex;
+     margin: auto;
+  }
+  .section__localisation{
+   width: 50%;
+   margin-top: -1px;
+  }
+  .section__commemoratif{
+   width: 50%;
+  }
+}
+.infos__localisation{
+   color: #595322;
+   font-size: 1.2em;
+}
+ /* SECTION PLAQUE COMMÉMORATIVE */
+.section__commemoratif{
+   text-align: center;
+}
+ /* SECTION CAPSULE SONORE */
+ @media (max-width:600px){
+   .div__sonore{
+      margin-left: 10px;
+      margin-right: 10px;
+   }
+   
+}
+ @media (min-width:600px){
+   .div__sonore{
+     display: flex;
+     margin: auto;
+     margin-bottom: 50px;
+  }
+  .audio{
+   width: 60%;
+  }
+  .texte__audio{
+   width: 40%;
+   margin-top: 10px;
+  }
+}
