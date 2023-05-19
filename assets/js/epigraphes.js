@@ -23,7 +23,6 @@ const objJSONepigraphes = {
       "TRANSCRIPTION": "Mon père est né en 1931 (...)"
     },
     "IMAGE": {
-      "URL": "",
       "TITRE": "Edmund Alleyn dans son atelier",
       "CREDIT": "Gabor Szilasi"
     },
@@ -52,7 +51,6 @@ const objJSONepigraphes = {
       "TRANSCRIPTION": "Philippe Aubert de Gaspé est le descendant d'une famille de nobles (...)"
     },
     "IMAGE": {
-      "URL": "",
       "TITRE": "Philippe Aubert de Gaspé, vers 1870",
       "CREDIT": "Bibliothèque et Archives nationales du Québec"
     },
@@ -81,7 +79,6 @@ const objJSONepigraphes = {
       "TRANSCRIPTION": "(Vieille musique) Les gens de Québec se souviennent d'Henriette Belley (...)"
     },
     "IMAGE": {
-      "URL": "",
       "TITRE": "En costume d’apparat",
       "CREDIT": "Photographe Roger Guillemette, Collection Musée Madame Henriette Belley"
     },
@@ -110,7 +107,6 @@ const objJSONepigraphes = {
       "TRANSCRIPTION": "Robert Blatter est un architecte-décorateur d'origine suisse (...)"
     },
     "IMAGE": {
-      "URL": "",
       "TITRE": "Maison Kerhulu, entre 1939 et 1945",
       "CREDIT": "Agathe Chiasson-Leblanc"
     },
@@ -138,7 +134,6 @@ const objJSONepigraphes = {
       "TRANSCRIPTION": "On sait peu de choses sur Joseph Knight Boswell, sinon qu'il est né en 1811 ou 1812(...)"
     },
     "IMAGE": {
-      "URL": "",
       "TITRE": "Brasserie Boswell, Québec, vers 1900",
       "CREDIT": "Musée McCord"
     },
@@ -167,7 +162,6 @@ const objJSONepigraphes = {
       "TRANSCRIPTION": "(Musique) Les gens de Québec se souviennent de Marthe Caillaud-Simard (...)"
     },
     "IMAGE": {
-      "URL": "",
       "TITRE": "Marthe Caillaud-Simard montrant son livre portant la signature du général de Gaulle",
       "CREDIT": "Collection privée"
     },
@@ -196,7 +190,6 @@ const objJSONepigraphes = {
       "TRANSCRIPTION": "(Musique style boogie) Les gens de Québec se souviennent de Johnny Farago (...)"
     },
     "IMAGE": {
-      "URL": "",
       "TITRE": "Un moment de répit",
       "CREDIT": "Photo Le Soleil"
     },
@@ -225,7 +218,6 @@ const objJSONepigraphes = {
       "TRANSCRIPTION": "(Musique) Les gens de Québec se souviennent de Camille Henri (...)"
     },
     "IMAGE": {
-      "URL": "",
       "TITRE": "L’ailier gauche des Citadelles, Camille Henry",
       "CREDIT": "Photo Collection privée"
     },
@@ -254,7 +246,6 @@ const objJSONepigraphes = {
       "TRANSCRIPTION": "Louis Jobin est un des plus grands sculpteurs que le Québec a (...)"
     },
     "IMAGE": {
-      "URL": "",
       "TITRE": "Louis Jobin",
       "CREDIT": "Anonyme"
     },
@@ -283,7 +274,6 @@ const objJSONepigraphes = {
       "TRANSCRIPTION": "(Musique avec grésillements électriques) Les gens de Québec se souviennent de Sigismund Mohr (...)"
     },
     "IMAGE": {
-      "URL": "",
       "TITRE": "Sigismund Mohr",
       "CREDIT": "Courtoisie de la collection historique de Bell Canada, 15414"
     },
@@ -312,7 +302,6 @@ const objJSONepigraphes = {
       "TRANSCRIPTION": "Probablement parmi les plus grands artistes multidisciplinaires (...)"
     },
     "IMAGE": {
-      "URL": "",
       "TITRE": "Alfred Pellan",
       "CREDIT": "Musée national des beaux-arts du Québec"
     },
@@ -341,7 +330,6 @@ const objJSONepigraphes = {
       "TRANSCRIPTION": "(Musique) Les gens de Québec se souviennent de Maurice Pollack (...)"
     },
     "IMAGE": {
-      "URL": "",
       "TITRE": "Maurice Pollack",
       "CREDIT": "Photo Fondation Maurice Pollack"
     },

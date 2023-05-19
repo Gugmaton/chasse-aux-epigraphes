@@ -18,6 +18,7 @@ const objFicheArtsVisuels = {
     intIdFicheCourante: obtenirValeurUrlParam('id'),
     refPrenom: document.getElementById("prenom"),
     refNom: document.getElementById("nom"),
+    refImage: document.getElementById(""),
     refDomaine: document.getElementById("domaine"),
     refImageTitre: document.getElementById("titre_image"),
     refImageCredit: document.getElementById("credit_image"),
@@ -54,9 +55,10 @@ const objFicheArtsVisuels = {
         const intIdFicheCourante = obtenirValeurUrlParam('id');
         const objEpigrapheCourante = objJSONepigraphes[intIdFicheCourante];
 
-        document.getElementById('prenom').innerHTML = `${objEpigrapheCourante.PRENOM} `;
-        document.getElementById('nom').innerHTML = objEpigrapheCourante.NOM;
-        document.getElementById('url_image').src = `../images/${intIdFicheCourante}_${objEpigrapheCourante.SUFFIXE_IMAGES}.jpg`;
+
+        document.getElementById("url_image").src = `../assets/images/personnages/${intIdFicheCourante}_chasse.JPG`; 
+        document.getElementById("url__map").src = `../assets/images/zoomGoogleMaps/${intIdFicheCourante}-zoom-google-maps.png`;
+        document.getElementById("url_plaque").src = `../assets/images/epigraphes/${intIdFicheCourante}_plaque.jpg`;
 
         // À compléter
         localStorage.setItem(intIdFicheCourante, true);
