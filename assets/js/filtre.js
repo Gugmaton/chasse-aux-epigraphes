@@ -24,7 +24,7 @@ function filtrer() {
             fiche.classList.add('selection');
         }
         if (fiche.dataset.type == filtreType) {
-            fiche.classList.add('selection')
+            fiche.classList.add('selection');
         }
     });
     activerFiltre(this);

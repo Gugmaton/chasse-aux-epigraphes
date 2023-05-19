@@ -13,6 +13,11 @@
 /* Classe pour les filtres */
 .selection {
     order: -1;
+    border: solid #F1DB32 4px;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .main {
@@ -42,7 +47,7 @@
     }
 
     .sous-titre {
-        margin-left: 85px;
+        margin-left: 8%;
     }
 }
 
@@ -55,7 +60,7 @@
     .menuFiltre {
         display: flex;
         justify-content: start;
-        margin-left: 85px;
+        margin-left: 8%;
     }
 
     .menuFiltre__item {

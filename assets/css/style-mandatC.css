@@ -24,7 +24,7 @@
 }
 
 /* svg */
-@media (min-width:600px){
+/* @media (min-width:600px){
     svg {
         width: 500px;
         margin-top: 20px;
@@ -39,10 +39,16 @@
         margin-left: 100px; 
         margin-bottom: 25px; 
     }
-}
+} */
 /* HEADER */
 .header{
     background-color: #2D3540;
+}
+.logo{
+  width: 500px;
+  margin-top: 20px;
+  margin-left: 100px; 
+  margin-bottom: 25px; 
 }
 /* NAV */
 @media (min-width:600px){
@@ -57,24 +63,20 @@ main{
   padding: 30px;
   margin: 10px;
 }
-@media (min-width:600px){
-  .main{
-    padding: 30px;
-    margin: 10px;
-  }
-}
-
-@media (min-width:800px){
-  .main{
-    padding: 30px;
-    margin: 10px;
-  }
-}
 
 .titre{
   margin-left: 5%;
   color: #595322;
-  
+}
+@media (min-width:600px){
+  .titre{
+    font-size: 48px;
+  }
+}
+@media (min-width:800px){
+  .titre{
+    font-size: 48px;
+  }
 }
 
 .texte{
@@ -88,12 +90,31 @@ main{
 fieldset{
   background-color: #2D3540;
   color: white;
+  border-radius: 20px;
+}
+@media(min-width:600px){
+  fieldset{
+    background-color: #2D3540;
+    color: white;
+    border-radius: 20px;
+  }
+}
+@media(min-width:800px){
+  fieldset{
+    background-color: #2D3540;
+    color: white;
+    border-radius: 20px;
+  }
 }
 
 .chasse_pigee{
   font-weight: 400;
   font-size: 32px;
   line-height: 39px;
+}
+
+.nb_chasse_pigee{
+  color: #F1DB32;
 }
 
 .grille {
@@ -121,9 +142,100 @@ fieldset{
 .suggestion2 {
   grid-area: suggestion2;
 }
+@media(min-width:600px){
+  .grille {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "div1 div2 div2 div3 "
+      "suggestion1 suggestion1 suggestion2 suggestion2";
+    text-align: center;
+  }
+
+  .div1 {
+    grid-area: div1;
+  }
+  .div2 {
+    grid-area: div2;
+  }
+  .div3 {
+    grid-area: div3;
+  }
+  .suggestion1 {
+    grid-area: suggestion1;
+  }
+  .suggestion2 {
+    grid-area: suggestion2;
+  }
+}
+@media(min-width:800px){
+  .grille {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "div1 div2 div2 div3 "
+      "suggestion1 suggestion1 suggestion2 suggestion2";
+    text-align: center;
+  }
+
+  .div1 {
+    grid-area: div1;
+  }
+  .div2 {
+    grid-area: div2;
+  }
+  .div3 {
+    grid-area: div3;
+  }
+  .suggestion1 {
+    grid-area: suggestion1;
+  }
+  .suggestion2 {
+    grid-area: suggestion2;
+  }
+}
+
+.indice{
+  background-color: white;
+  border-radius: 50%;
+  border-color: #F1DB32;
+  width: 250px;
+  height: 250px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .piger_chasse{
-  
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 2%;
+  background-color: #F1DB32;
+  font-size: 130%;
+  padding: 1.5%;
+  border-radius: 20px;
+}
+@media(min-width:600px){
+  .piger_chasse{
+    width: 20%;
+    margin-left: 40%;
+    background-color: #F1DB32;
+    font-size: 130%;
+    padding: 1.5%;
+    border-radius: 20px;
+  }
+}
+@media(min-width:800px){
+  .piger_chasse{
+    width: 20%;
+    margin-left: 40%;
+    background-color: #F1DB32;
+    font-size: 130%;
+    padding: 1.5%;
+    border-radius: 20px;
+  }
 }
 /* FOOTER */
 /* icônes réseaux sociaux */
@@ -184,6 +296,124 @@ fieldset{
 .p__footer{
     text-align: center;
     color: white;
-    
 }
+@media(min-width:600px){
+  .social {
+    text-align: center;
+  }
 
+  .social-menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+  }
+  .social-menu__lien {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 6px;
+    background-repeat: no-repeat;
+    font-size: 0;
+    opacity: 1;
+    background-image: url(//hautemontagne.ca/sources/sprite-sociaux.png);
+    transition: transform .2s ease;
+  }
+  .social-menu__item:first-child .social-menu__lien:link {
+    background-position: -185px -10px;
+  }
+  .social-menu__item:nth-child(2) .social-menu__lien:link {
+    background-position: -185px -46px;
+  }
+  .social-menu__item:nth-child(3) .social-menu__lien:link {
+    background-position: -185px -82px;
+  }
+  .social-menu__item:nth-child(4) .social-menu__lien:link {
+    background-position: -185px -226px;
+  }
+  .social-menu__item:first-child .social-menu__lien:hover {
+    background-position: -423px -10px;
+    transform: scale(1.07) rotate(10deg);
+  }
+  .social-menu__item:nth-child(2) .social-menu__lien:hover {
+    background-position: -423px -46px;
+    transform: scale(1.07) rotate(10deg);
+  }
+  .social-menu__item:nth-child(3) .social-menu__lien:hover {
+    background-position: -423px -82px;
+    transform: scale(1.07) rotate(10deg);
+  }
+  .social-menu__item:nth-child(4) .social-menu__lien:hover {
+    background-position: -423px -226px;
+    transform: scale(1.07) rotate(10deg);
+  }
+.footer{
+    background-color: #2D3540;
+    padding-bottom: 30px;
+}
+.p__footer{
+    text-align: center;
+    color: white;
+}
+}
+@media(min-width:800px){
+  .social {
+    text-align: center;
+  }
+
+  .social-menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-align: center;
+    padding-left: 0;
+  }
+  .social-menu__lien {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 6px;
+    background-repeat: no-repeat;
+    font-size: 0;
+    opacity: 1;
+    background-image: url(//hautemontagne.ca/sources/sprite-sociaux.png);
+    transition: transform .2s ease;
+  }
+  .social-menu__item:first-child .social-menu__lien:link {
+    background-position: -185px -10px;
+  }
+  .social-menu__item:nth-child(2) .social-menu__lien:link {
+    background-position: -185px -46px;
+  }
+  .social-menu__item:nth-child(3) .social-menu__lien:link {
+    background-position: -185px -82px;
+  }
+  .social-menu__item:nth-child(4) .social-menu__lien:link {
+    background-position: -185px -226px;
+  }
+  .social-menu__item:first-child .social-menu__lien:hover {
+    background-position: -423px -10px;
+    transform: scale(1.07) rotate(10deg);
+  }
+  .social-menu__item:nth-child(2) .social-menu__lien:hover {
+    background-position: -423px -46px;
+    transform: scale(1.07) rotate(10deg);
+  }
+  .social-menu__item:nth-child(3) .social-menu__lien:hover {
+    background-position: -423px -82px;
+    transform: scale(1.07) rotate(10deg);
+  }
+  .social-menu__item:nth-child(4) .social-menu__lien:hover {
+    background-position: -423px -226px;
+    transform: scale(1.07) rotate(10deg);
+  }
+.footer{
+    background-color: #2D3540;
+    padding-bottom: 30px;
+}
+.p__footer{
+    text-align: center;
+    color: white;
+}
+}
