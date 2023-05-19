@@ -47,7 +47,7 @@
     }
 
     .sous-titre {
-        margin-left: 85px;
+        margin-left: 8%;
     }
 }
 
@@ -60,7 +60,7 @@
     .menuFiltre {
         display: flex;
         justify-content: start;
-        margin-left: 85px;
+        margin-left: 8%;
     }
 
     .menuFiltre__item {
