@@ -7,6 +7,13 @@
 @import url(utilitaires.css);
 @import url(base.css);
 @import url(typo.css);
+@import url(header-footer.css);
+@import url(menu.css);
+
+/* Classe pour les filtres */
+.selection {
+    order: -1;
+}
 
 .main {
     text-align: center;
@@ -15,15 +22,21 @@
 }
 
 .titre {
-    text-align: left;
+    text-align: center;
     color: #595322;
+}
+
+@media (min-width: 600px) {
+    .titre {
+        text-align: left;
+    }
 }
 
 .sous-titre, .menuFiltre, .nom__personnage {
     color: #2D3540;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 600px) {
     .sous-titre {
         text-align: left;
     }
@@ -54,12 +67,30 @@
     }
 }
 
-.personnages {
+.filtres__bouton {
+    border: none;
+    background-color: white;
+    padding: 10px;
+}
+
+.filtres__bouton--actif {
+    background-color: #F1DB32;
+    border-radius: 10px;
+}
+
+.filtres__bouton:hover,
+.filtres__bouton:active {
+    background-color: #F1DB32;
+    border-radius: 10px;
+}
+
+.listePersonnages {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     max-width: 1000px;
     margin: auto;
+    padding-left: 0;
 }
 
 .lien__personnage {
