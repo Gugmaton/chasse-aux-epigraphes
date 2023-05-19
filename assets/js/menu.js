@@ -1,5 +1,5 @@
 /**
- * @file Un menu simple, responsive bâti en amélioration progressive.
+ * @file Un menu simple, responsive bâti en amélioration progressive. MODIFIÉ PAR MAXIME LEBRUN
  * @version v3.1 Mise à jour le 7 février :: changement du préfixe tag pour ref ! 
  * @author TIMCSF
  * @todo Problème: si le menu est fermé, les liens de menu ne devrait pas être dans l'ordre de tabulation?
