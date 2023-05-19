@@ -82,9 +82,39 @@ main{
 .texte{
   margin-left: 5%;
 }
+@media(min-width:600px){
+  .texte{
+    margin-left: 5%;
+  }
+}
+@media(min-width:800px){
+  .texte{
+    font-size: 25px;
+  }
+}
+@media(min-width:1000px){
+  .texte{
+    font-size: 25px;
+  }
+}
 
 .regles{
   margin-left: 7%;
+}
+@media(min-width:600px){
+  .regles{
+    margin-left: 7%;
+  }
+}
+@media(min-width:800px){
+  .regles{
+    font-size: 20px;
+  }
+}
+@media(min-width:1000px){
+  .regles{
+    font-size: 25px;
+  }
 }
 
 fieldset{
@@ -108,9 +138,23 @@ fieldset{
 }
 
 .chasse_pigee{
-  font-weight: 400;
+  font-weight: 300;
   font-size: 32px;
   line-height: 39px;
+}
+@media(min-width:600px){
+  .chasse_pigee{
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+@media(min-width:800px){
+  .chasse_pigee{
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 39px;
+  }
 }
 
 .nb_chasse_pigee{
@@ -197,15 +241,69 @@ fieldset{
   }
 }
 
-.indice{
+.indice__image{
   background-color: white;
   border-radius: 50%;
   border-color: #F1DB32;
-  width: 250px;
-  height: 250px;
+  width: 100px;
+  height: 100px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+@media(min-width:600px){
+  .indice__image{
+    width: 150px;
+    height: 150px;
+  }
+  .indice1{
+    font-size: 14px; 
+   }
+  .indice2{
+    font-size: 14px; 
+   }
+  .indice3{
+   font-size: 14px; 
+  }
+  .indice__svg{
+    width: 100px;
+  }
+}
+@media(min-width:800px){
+  .indice__image{
+    width: 200px;
+    height: 200px;
+  }
+  .indice1{
+    font-size: 20px; 
+   }
+  .indice2{
+    font-size: 20px; 
+   }
+  .indice3{
+   font-size: 20px; 
+  }
+  .indice__svg{
+    width: 150px;
+  }
+}
+@media(min-width:1000px){
+  .indice__image{
+    width: 300px;
+    height: 300px;
+  }
+  .indice1{
+    font-size: 25px; 
+   }
+  .indice2{
+    font-size: 25px; 
+   }
+  .indice3{
+   font-size: 25px; 
+  }
+  .indice__svg{
+    width: 250px;
+  }
 }
 
 .piger_chasse{
@@ -219,8 +317,9 @@ fieldset{
 }
 @media(min-width:600px){
   .piger_chasse{
-    width: 20%;
-    margin-left: 40%;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 3%;
     background-color: #F1DB32;
     font-size: 130%;
     padding: 1.5%;
@@ -229,10 +328,20 @@ fieldset{
 }
 @media(min-width:800px){
   .piger_chasse{
-    width: 20%;
-    margin-left: 40%;
+    width: 30%;
+    margin-left: 35%;
     background-color: #F1DB32;
     font-size: 130%;
+    padding: 1.5%;
+    border-radius: 20px;
+  }
+}
+@media(min-width:1000px){
+  .piger_chasse{
+    width: 30%;
+    margin-left: 35%;
+    background-color: #F1DB32;
+    font-size: 200%;
     padding: 1.5%;
     border-radius: 20px;
   }
