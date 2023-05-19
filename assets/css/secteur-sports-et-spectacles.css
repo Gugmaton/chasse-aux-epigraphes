@@ -13,7 +13,7 @@
 @import url(header-footer.css);
 
 /*
-* SECTEUR ARTS VISUELS
+* SECTEUR SPORTS ET SPECTACLES
 * TITRES
 * BACKGROUND IMAGE
 * SECTION NOTES BIOGRAPHIQUES
@@ -35,9 +35,11 @@ h3{
    color: #595322;
 }
 /* BACKGROUND IMAGE */
-.arts-visuels{
+.sports-et-spectacles{
    background-image: url(../images/sportsetSpectaclesBackground.png);
    background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 /* Quelques utilitaires */
  section p{
