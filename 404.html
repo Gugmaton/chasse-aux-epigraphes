@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERREUR 404</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        } 
+        body,
+        h1 {
+            margin: 0;
+            text-align: center;
+        } 
+
+        section {
+            background-color: rgba(255, 255, 255, 0.75);
+            padding: 2em;
+            border-radius: 10px;
+            position: fixed;
+            top: 30%;
+            left: calc(50% - 300px); 
+        }
+
+        canvas {
+            width: 100% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h1>OUPS! OUPS! <strong>Erreur 404</strong></h1>
+            <p>La page que vous recherchez n'existe pas encore...</p>
+        </section>
+
+
+        <div id="sketch-holder"></div>
+
+    </main>
+    <script src="assets/js/p5.min.js"></script>
+    <script src="assets/js/404.js"></script>
+</body>
+
+</html>
