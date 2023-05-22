@@ -17,7 +17,7 @@ const objFicheArtsVisuels = {
      */
     
     initialiser: function () {
-       
+        document.querySelector(".progression").innerHTML = localStorage.nombre_indice_trouve;
         // Prénom et nom dynamiques
         const intIdFicheCourante = obtenirValeurUrlParam('id');
         const objEpigrapheCourante = objJSONepigraphes[intIdFicheCourante];
@@ -40,7 +40,8 @@ const objFicheArtsVisuels = {
         const refPreambuleSonore = document.getElementById("audio_preambule");
         const refTranscriptionSonore = document.getElementById("audio_transcription");
         const refCreditAudio = document.getElementById("audio_credit");
-
+      
+            
 
          // ÉCRIRE LE CONTENU DU JSON DANS LES ÉLÉMENTS HTML CIBLÉS.
         refPrenom.innerHTML = objJSONepigraphes[intIdFicheCourante].PRENOM;
@@ -68,52 +69,88 @@ const objFicheArtsVisuels = {
         document.getElementById("carteZoom").src = `../assets/images/zoomGoogleMaps/${intIdFicheCourante}-zoom-google-maps.png`;
         document.getElementById("url_plaque").src = `../assets/images/epigraphes/${intIdFicheCourante}_plaque.jpg`; 
         
-    
 
         // LOCAL STORAGE QUI VA SERVIR POUR GOOGLE MAP
         localStorage.setItem(intIdFicheCourante, true);
         
     },
-    // verifierIndice: function (){
-    //     const intIdFicheCourante = obtenirValeurUrlParam('id');
-    //     const refBtnRadio = document.querySelector("input[name=formChasse]:checked");
-    //     if (localStorage.id_personnage == undefined){
-    //         document.getElementById("message").innerHTML = "Aucune chasse en cours. Si vous désirez débuter une chasse, visitez la page <a href='../chasse/index.html'>Chasse</a>";
-    //     }else{
+    verifierIndice: function (){
+        const intIdFicheCourante = obtenirValeurUrlParam('id');
+        const refBtnRadio = document.querySelector("input[name=formChasse]:checked");
+        
+        const refProgression = document.querySelector(".progression");
+        let intProgression = localStorage.nombre_indice_trouve;
 
-    //         if (refBtnRadio === null){
-    //             document.getElementById("message").innerHTML = "Choisissez un indice";
-    //             console.log(refBtnRadio);
-    //         }else{
-                
-    //             if (refBtnRadio.value == "personnage"){
-    //                 if (intIdFicheCourante == localStorage.id_personnage){
-    //                     document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[localStorage.id_personnage].CHASSE.REPONSE;
-    //                     localStorage.personne_est_trouve = true;
-    //                 }else{
-    //                     document.getElementById("message").innerHTML = "Désolé. Ce n’est pas le bon indice.";
-    //                 }
-    //             }
-    //             if (refBtnRadio.value == "objet"){
-    //                 if (intIdFicheCourante == localStorage.id_objet){
-    //                     document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[localStorage.id_objet].CHASSE.REPONSE;
-    //                     localStorage.objet_est_trouve = true;
-    //                 }else{
-    //                     document.getElementById("message").innerHTML = "Désolé. Ce n’est pas le bon indice.";
-    //                 }
-    //             }
-    //             if (refBtnRadio.value == "lieu"){
-    //                 if (intIdFicheCourante == localStorage.id_lieu){
-    //                     localStorage.lieu_est_trouve = true;
-    //                     document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[localStorage.id_lieu].CHASSE.REPONSE;
-    //                 }else{
-    //                     document.getElementById("message").innerHTML = "Désolé. Ce n’est pas le bon indice.";
-    //                 }
-    //             }
-    //         }
-    //     }
-    // },
+        console.log(refBtnRadio);
+        console.log(typeof intProgression);
+        console.log(refProgression);
+        if (localStorage.id_personnage == undefined){
+            document.getElementById("message").innerHTML = "Aucune chasse en cours. Si vous désirez débuter une chasse, visitez la page <a href='../chasse/index.html'>Chasse</a>";
+        }else{
+
+            if (refBtnRadio === null){
+                document.getElementById("message").innerHTML = "Choisissez un indice";
+                console.log(refBtnRadio);
+            }else{
+                if (refBtnRadio.value == "perso") {
+                    if (intIdFicheCourante == localStorage.id_personnage){
+                        document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[localStorage.id_personnage].CHASSE.REPONSE;
+                        localStorage.personnage_est_trouve = true;
+                        intProgression++;
+
+                        if(intProgression <= 3){
+                            localStorage.setItem("nombre_indice_trouve", intProgression);
+                        console.log(intProgression);
+                        refProgression.innerHTML = localStorage.nombre_indice_trouve;
+                        }
+                        
+
+                        
+                        
+                    }else{
+                        document.getElementById("message").innerHTML = "Désolé. Ce n'est pas le bon indice.";
+                    }
+                }
+                if (refBtnRadio.value == "objet"){
+                    if (intIdFicheCourante == localStorage.id_objet){
+                        document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[localStorage.id_objet].CHASSE.REPONSE;
+                        localStorage.objet_est_trouve = true;
+                        intProgression++;
+                        if(intProgression <= 3){
+                            localStorage.setItem("nombre_indice_trouve", intProgression);
+                        console.log(intProgression);
+                        refProgression.innerHTML = localStorage.nombre_indice_trouve;
+                        }
+                    }else{
+                        document.getElementById("message").innerHTML = "Désolé. Ce n'est pas le bon indice.";
+                    }
+                }
+                if (refBtnRadio.value == "lieu"){
+                    if (intIdFicheCourante == localStorage.id_lieu){
+                        localStorage.lieu_est_trouve = true;
+                        document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[localStorage.id_lieu].CHASSE.REPONSE;
+                        intProgression++;
+                        if(intProgression <= 3){
+                            localStorage.setItem("nombre_indice_trouve", intProgression);
+                        console.log(intProgression);
+                        refProgression.innerHTML = localStorage.nombre_indice_trouve;
+                        }
+                    }else{
+                        document.getElementById("message").innerHTML = "Désolé. Ce n'est pas le bon indice.";
+                    }
+                }
+
+                if (refProgression.innerHTML >= 3) {
+                    refProgression.innerHTML = 3;
+                    document.getElementById("message").innerHTML = "Bravo! Vous avez terminé la chasse, vous pouvez maintenant participer au <a href='../concours/index.html'>Concours!</a>";
+                }
+            }
+        }
+    },
 }
 
 objFicheArtsVisuels.initialiser();
-// document.getElementById("btnSoumettre").addEventListener("click", function (){objFicheArtsVisuels.verifierIndice()});
+document.querySelector(".btn__soumettre").addEventListener("click", objFicheArtsVisuels.verifierIndice);
+window.addEventListener("load", function () {
+    objChasse.initialiserChasse();
+});
