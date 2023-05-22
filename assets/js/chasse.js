@@ -39,7 +39,8 @@ const objChasse = {
         const refImgObjet = document.querySelector(".img__indice__objet");
         const refImgLieu = document.querySelector(".img__indice__lieu");
         document.querySelector('.progression').innerHTML= localStorage.nombre_indice_trouve;
-
+        //document.getElementById("textarea").innerHTML = "jadwwfawygd";
+        console.log(document.getElementById("textarea"));
         
         if (localStorage.id_personnage != undefined) {
             document.querySelector(".progression").classList.remove("cache");

@@ -122,7 +122,6 @@ const objFicheArtsVisuels = {
                         refImgPerso.classList.remove("cache");
                         refImgPerso.src = `../assets/images/personnages/${intIdFicheCourante}_chasse.jpg`;
                         // localStorage.setItem("image_personnage", `../assets/images/lieux/${intIdFicheCourante}_lieu.jpg`);
-                        
 
                         if (intProgression <= 3) {
                             localStorage.setItem("nombre_indice_trouve", intProgression);
