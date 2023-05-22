@@ -65,6 +65,10 @@
 
 /* BODY */
 
+.mandatC{
+  background-image: url(../images/economie-politique.webp);
+}
+
 main{
   padding: 30px;
   margin: 10px;
@@ -77,12 +81,18 @@ main{
 @media(min-width:300px){
   .titre{
     width: 60%;
-    font-size: 150%;
+    font-size: 130%;
   }
 }
 @media(min-width:700px){
   .titre{
     width: 80%;
+    font-size: 220%;
+  }
+}
+@media(min-width:1000px){
+  .titre{
+    width: 40%;
     font-size: 220%;
   }
 }
@@ -174,8 +184,9 @@ fieldset{
   grid-template-columns: 2fr 1fr 1fr 2fr;
   grid-template-rows: auto;
   grid-template-areas: 
-    "div1 div2 div2 div3 "
-    "suggestion1 suggestion1 suggestion2 suggestion2";
+    "div1 div2 div2 div3"
+    "suggestion1 suggestion1 suggestion2 suggestion2 "
+    "piger_chasse piger_chasse redirection__site redirection__site";
   text-align: center;
 }
 
@@ -190,9 +201,17 @@ fieldset{
 }
 .suggestion1 {
   grid-area: suggestion1;
+  font-size: 150%;
 }
 .suggestion2 {
   grid-area: suggestion2;
+  font-size: 150%;
+}
+.piger_chasse{
+  grid-area: piger_chasse;
+}
+.redirection__site{
+  grid-area: redirection__site;
 }
 @media(min-width:300px){
   .grille {
@@ -201,7 +220,8 @@ fieldset{
     grid-template-rows: auto;
     grid-template-areas: 
       "div1 div2 div2 div3 "
-      "suggestion1 suggestion1 suggestion2 suggestion2";
+      "suggestion1 suggestion1 suggestion2 suggestion2 "
+      "piger_chasse piger_chasse redirection__site redirection__site";
     text-align: center;
   }
 
@@ -216,9 +236,17 @@ fieldset{
   }
   .suggestion1 {
     grid-area: suggestion1;
+    font-size: 80%;
   }
   .suggestion2 {
     grid-area: suggestion2;
+    font-size: 80%;
+  }
+  .piger_chasse{
+    grid-area: piger_chasse;
+  }
+  .redirection__site{
+    grid-area: redirection__site;
   }
 }
 @media(min-width:700px){
@@ -228,7 +256,8 @@ fieldset{
     grid-template-rows: auto;
     grid-template-areas: 
       "div1 div2 div2 div3 "
-      "suggestion1 suggestion1 suggestion2 suggestion2";
+      "suggestion1 suggestion1 suggestion2 suggestion2"
+      "piger_chasse piger_chasse redirection__site redirection__site";
     text-align: center;
   }
 
@@ -243,9 +272,112 @@ fieldset{
   }
   .suggestion1 {
     grid-area: suggestion1;
+    font-size: 100%;
   }
   .suggestion2 {
     grid-area: suggestion2;
+    font-size: 100%;
+  }
+  .piger_chasse{
+    grid-area: piger_chasse;
+  }
+  .redirection__site{
+    grid-area: redirection__site;
+  }
+}
+@media(min-width:1000px){
+  .grille {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "div1 div2 div2 div3 "
+      "suggestion1 suggestion1 suggestion2 suggestion2 "
+      "piger_chasse piger_chasse redirection__site redirection__site";
+    text-align: center;
+  }
+
+  .div1 {
+    grid-area: div1;
+  }
+  .div2 {
+    grid-area: div2;
+  }
+  .div3 {
+    grid-area: div3;
+  }
+  .suggestion1 {
+    grid-area: suggestion1;
+    font-size: 150%;
+  }
+  .suggestion2 {
+    grid-area: suggestion2;
+    font-size: 150%;
+  }
+  .piger_chasse{
+    grid-area: piger_chasse;
+  }
+}
+.redirection__site{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "btn__galerie btn__carte";
+  text-align: center;
+}
+.btn__galerie{
+  grid-area: btn__galerie;
+}
+.btn__carte{
+  grid-area: btn__carte;
+}
+@media(min-width:300px){
+  .redirection__site{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "btn__galerie btn__carte";
+    text-align: center;
+  }
+  .btn__galerie{
+      grid-area: btn__galerie;
+  }
+  .btn__carte{
+    grid-area: btn__carte;
+  }
+}
+@media(min-width:700px){
+  .redirection__site{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "btn__galerie btn__carte";
+    text-align: center;
+  }
+  .btn__galerie{
+      grid-area: btn__galerie;
+  }
+  .btn__carte{
+    grid-area: btn__carte;
+  }
+}
+@media(min-width:1000px){
+  .redirection__site{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "btn__galerie btn__carte";
+    text-align: center;
+  }
+  .btn__galerie{
+      grid-area: btn__galerie;
+  }
+  .btn__carte{
+    grid-area: btn__carte;
   }
 }
 
@@ -264,16 +396,19 @@ fieldset{
     width: 70px;
     height: 70px;
   }
-  .indice1{
+  .indice__perso{
     font-size: 10px; 
+    margin-bottom: 5%;
    }
-  .indice2{
+  .indice__objet{
     font-size: 10px; 
     margin-right: 2px;
+    margin-bottom: 5%;
    }
-  .indice3{
+  .indice__lieu{
    font-size: 10px;
    margin-top: 11px;
+   margin-bottom: 5%;
   }
   .indice__svg{
     width: 50px;
@@ -285,14 +420,17 @@ fieldset{
     width: 180px;
     height: 180px;
   }
-  .indice1{
+  .indice__perso{
     font-size: 20px; 
+    margin-bottom: 4%;
    }
-  .indice2{
+  .indice__objet{
     font-size: 20px; 
+    margin-bottom: 4%;
    }
-  .indice3{
+  .indice__lieu{
    font-size: 20px; 
+   margin-bottom: 4%;
   }
   .indice__svg{
     width: 150px;
@@ -303,14 +441,17 @@ fieldset{
     width: 300px;
     height: 300px;
   }
-  .indice1{
+  .indice__perso{
     font-size: 25px; 
+    margin-bottom: 6%;
    }
-  .indice2{
+  .indice__objet{
     font-size: 25px; 
+    margin-bottom: 6%;
    }
-  .indice3{
+  .indice__lieu{
    font-size: 25px; 
+   margin-bottom: 6%;
   }
   .indice__svg{
     width: 250px;
@@ -328,17 +469,17 @@ fieldset{
 }
 @media(min-width:300px){
   .piger_chasse{
-    width: 40%;
-    margin-left: 30%;
+    width: 60%;
+    margin-left: 10%;
     background-color: #F1DB32;
-    font-size: 90%;
+    font-size: 75%;
     padding: 1.5%;
     border-radius: 20px;
   }
 }
 @media(min-width:700px){
   .piger_chasse{
-    width: 30%;
+    width: 35%;
     margin-left: 35%;
     background-color: #F1DB32;
     font-size: 130%;
@@ -356,6 +497,93 @@ fieldset{
     border-radius: 20px;
   }
 }
+
+.btn__galerie{
+  width: 20%;
+  margin-left: -100%;
+  margin-top: 2%;
+  background-color: #F1DB32;
+  font-size: 130%;
+  padding: 1.5%;
+  border-radius: 20px;
+}
+@media(min-width:300px){
+  .btn__galerie{
+    width: 100%;
+    margin-left: -100%;
+    margin-top: 2%;
+    background-color: #F1DB32;
+    font-size: 90%;
+    padding: 15%;
+    border-radius: 20px;
+  }
+}
+@media(min-width:700px){
+  .btn__galerie{
+    width: 80%;
+    margin-left: -100%;
+    margin-top: 5%;
+    background-color: #F1DB32;
+    font-size: 130%;
+    padding: 15%;
+    border-radius: 20px;
+  }
+}
+@media(min-width:1000px){
+  .btn__galerie{
+    width: 70%;
+    margin-left: -100%;
+    margin-top: 2%;
+    background-color: #F1DB32;
+    font-size: 200%;
+    padding: 10%;
+    border-radius: 20px;
+  }
+}
+
+.btn__carte{
+  width: 50%;
+  margin-left: -100%;
+  margin-top: 2%;
+  background-color: #F1DB32;
+  font-size: 130%;
+  padding: 1.5%;
+  border-radius: 20px;
+}
+@media(min-width:300px){
+  .btn__carte{
+    width: 100%;
+    margin-left: -70%;
+    margin-top: 2%;
+    background-color: #F1DB32;
+    font-size: 90%;
+    padding: 15%;
+    border-radius: 20px;
+  }
+}
+@media(min-width:700px){
+  .btn__carte{
+    width: 80%;
+    margin-left: -100%;
+    margin-top: 5%;
+    background-color: #F1DB32;
+    font-size: 130%;
+    padding: 15%;
+    border-radius: 20px;
+  }
+}
+@media(min-width:1000px){
+  .btn__carte{
+    width: 70%;
+    margin-left: -100%;
+    margin-top: 2%;
+    background-color: #F1DB32;
+    font-size: 200%;
+    padding: 10%;
+    border-radius: 20px;
+  }
+}
+
 /* FOOTER */
 /* icônes réseaux sociaux */
 .social {
