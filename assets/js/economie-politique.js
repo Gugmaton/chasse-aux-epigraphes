@@ -1,4 +1,0 @@
-/**
- * @author ANTOINE LABARRE, ARTADestrokzZ
- */
-
