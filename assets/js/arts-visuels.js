@@ -15,89 +15,105 @@ const objFicheArtsVisuels = {
     /**
      * Cette méthode permet d'intégrer les contenus dynamiques provenant du JSON
      */
-    intIdFicheCourante: obtenirValeurUrlParam('id'),
-    refPrenom: document.getElementById("prenom"),
-    refNom: document.getElementById("nom"),
-    refImage: document.getElementById(""),
-    refDomaine: document.getElementById("domaine"),
-    refImageTitre: document.getElementById("titre_image"),
-    refImageCredit: document.getElementById("credit_image"),
-    refNoteBiographique: document.querySelector("#notes_biographiques p"),
-    refArrondissement: document.getElementById("arrondissement"),
-    refQuartier: document.getElementById("quartier"),
-    refAdresse: document.getElementById("adresse"),
-    refTranscription: document.getElementById("transcript"),
-    refAudioDescription: document.getElementById("audio_preambule"),
-    refAudioTranscription: document.getElementById("audio_transcription"),
-    refAudioUrl: document.getElementById("audio_url"),
-    refAudioCredit: document.getElementById("audio_credit"),
-
+    
     initialiser: function () {
-        console.log(objJSONepigraphes);
-        console.log("allo");
-        // console.log(objJSONepigraphes[this.intIdFicheCourante].PRENOM);
-        this.refPrenom.innerHTML = objJSONepigraphes[this.intIdFicheCourante].PRENOM + " ";
-        this.refNom.innerHTML = objJSONepigraphes[this.intIdFicheCourante].NOM;
-        this.refDomaine.innerHTML = objJSONepigraphes[this.intIdFicheCourante].DOMAINE;
-        this.refImageTitre.innerHTML = objJSONepigraphes[this.intIdFicheCourante].IMAGE.TITRE;
-        this.refImageCredit.innerHTML = objJSONepigraphes[this.intIdFicheCourante].IMAGE.CREDIT;
-        this.refNoteBiographique.innerHTML = objJSONepigraphes[this.intIdFicheCourante].BIOGRAPHIE;
-        this.refArrondissement.innerHTML = objJSONepigraphes[this.intIdFicheCourante].ARRONDISSEMENT;
-        this.refQuartier.innerHTML = objJSONepigraphes[this.intIdFicheCourante].QUARTIER;
-        this.refAdresse.innerHTML = objJSONepigraphes[this.intIdFicheCourante].ADRESSE;
-        this.refTranscription.innerHTML = objJSONepigraphes[this.intIdFicheCourante].PLAQUE_TRANSCRIPTION;
-        this.refAudioDescription.innerHTML = objJSONepigraphes[this.intIdFicheCourante].AUDIO.DESCRIPTION;
-        this.refAudioTranscription.innerHTML = objJSONepigraphes[this.intIdFicheCourante].AUDIO.TRANSCRIPTION;
-        this.refAudioUrl.src = objJSONepigraphes[this.intIdFicheCourante].AUDIO.URL;
-        this.refAudioUrl.load();
-        this.refAudioCredit.innerHTML = objJSONepigraphes[this.intIdFicheCourante].AUDIO.CREDIT;
+       
         // Prénom et nom dynamiques
         const intIdFicheCourante = obtenirValeurUrlParam('id');
         const objEpigrapheCourante = objJSONepigraphes[intIdFicheCourante];
+        const refPrenom = document.getElementById("prenom");
+        const refNom = document.getElementById("nom");
+        const refDomaine = document.getElementById("domaine");
+        // IMAGE
+        const refTitreImage = document.getElementById("titre_image");
+        const refCreditPhoto = document.getElementById("credit_image");
+        // NOTES BIO
+        const refNotesBio = document.getElementById("p__biographie");
+        // LOCALISATION
+        const refArrondissement = document.getElementById("arrondissement");
+        const refQuartier = document.getElementById("quartier");
+        const refAdresse = document.getElementById("adresse");
+        // PLAQUE COMMÉMORATIVE
+        const refDescPlaque = document.getElementById("transcript");
+        // CAPSULE SONORE
+        const refSonore = document.getElementById("audio_url");
+        const refPreambuleSonore = document.getElementById("audio_preambule");
+        const refTranscriptionSonore = document.getElementById("audio_transcription");
+        const refCreditAudio = document.getElementById("audio_credit");
 
 
-        document.getElementById("url_image").src = `../assets/images/personnages/${intIdFicheCourante}_chasse.JPG`; 
-        document.getElementById("url__map").src = `../assets/images/zoomGoogleMaps/${intIdFicheCourante}-zoom-google-maps.png`;
-        document.getElementById("url_plaque").src = `../assets/images/epigraphes/${intIdFicheCourante}_plaque.jpg`;
+         // ÉCRIRE LE CONTENU DU JSON DANS LES ÉLÉMENTS HTML CIBLÉS.
+        refPrenom.innerHTML = objJSONepigraphes[intIdFicheCourante].PRENOM;
+        refNom.innerHTML = objJSONepigraphes[intIdFicheCourante].NOM;
+        refDomaine.innerHTML = objJSONepigraphes[intIdFicheCourante].DOMAINE;
+        // IMAGE
+        refTitreImage.innerHTML = objJSONepigraphes[intIdFicheCourante].IMAGE.TITRE;
+        refCreditPhoto.innerHTML = objJSONepigraphes[intIdFicheCourante].IMAGE.CREDIT;
+        // NOTES BIO
+        refNotesBio.innerHTML = objJSONepigraphes[intIdFicheCourante].BIOGRAPHIE;
+        // LOCALISATION
+        refArrondissement.innerHTML = objJSONepigraphes[intIdFicheCourante].ARRONDISSEMENT;
+        refQuartier.innerHTML = objJSONepigraphes[intIdFicheCourante].QUARTIER;
+        refAdresse.innerHTML = objJSONepigraphes[intIdFicheCourante].ADRESSE;
+        // PLAQUE COMMÉMORATIVE
+        refDescPlaque.innerHTML = objJSONepigraphes[intIdFicheCourante].PLAQUE_TRANSCRIPTION;
+        // CAPSULE SONORE
+        refSonore.src = objJSONepigraphes[intIdFicheCourante].AUDIO.URL;
+        refSonore.load();
+        refPreambuleSonore.innerHTML = objJSONepigraphes[intIdFicheCourante].AUDIO.DESCRIPTION;
+        refTranscriptionSonore.innerHTML = objJSONepigraphes[intIdFicheCourante].AUDIO.TRANSCRIPTION;
+        refCreditAudio.innerHTML = objJSONepigraphes[intIdFicheCourante].AUDIO.CREDIT;
+        // LIEN DES IMAGES
+        document.getElementById("url_image").src = `../assets/images/personnages/${intIdFicheCourante}_chasse.jpg`; 
+        document.getElementById("carteZoom").src = `../assets/images/zoomGoogleMaps/${intIdFicheCourante}-zoom-google-maps.png`;
+        document.getElementById("url_plaque").src = `../assets/images/epigraphes/${intIdFicheCourante}_plaque.jpg`; 
+        
+    
 
-        // À compléter
+        // LOCAL STORAGE QUI VA SERVIR POUR GOOGLE MAP
         localStorage.setItem(intIdFicheCourante, true);
+        
     },
-    verifierIndice: function () {
-        console.log("début");
-        console.log(document.getElementById("personnage").checked);
-        console.log(document.getElementById("personnage").id);
-        console.log(localStorage.id_personnage);
-        if (localStorage.id_personnage == undefined) {
-            document.getElementById("message").innerHTML = "Aucune chasse en cours. Si vous désirez débuter une chasse, visitez la page <a href='../chasse/index.html'>Chasse</a> "
-        } else {
-            if (document.getElementById("personnage").checked) {
-                if (this.intIdFicheCourante == localStorage.id_personnage) {
-                    localStorage.personnage_est_trouve = true;
-                    document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[this.intIdFicheCourante].CHASSE.INDICE;
-                } else {
-                    document.getElementById("message").innerHTML = "Désolé. Ce n'est pas le bon élément.";
-                }
-            } else if (document.getElementById("lieu").checked) {
-                if (this.intIdFicheCourante == localStorage.id_lieu) {
-                    localStorage.lieu_est_trouve = true;
-                    document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[this.intIdFicheCourante].CHASSE.INDICE;
-                } else {
-                    document.getElementById("message").innerHTML = "Désolé. Ce n'est pas le bon élément.";
-                }
-            } else if (document.getElementById("objet").checked) {
-                if (this.intIdFicheCourante == localStorage.id_objet) {
-                    localStorage.objet_est_trouve = true;
-                    document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[this.intIdFicheCourante].CHASSE.INDICE;
-                } else {
-                    document.getElementById("message").innerHTML = "Désolé. Ce n'est pas le bon élément.";
-                }
-            }
-        }
-    }
+    // verifierIndice: function (){
+    //     const intIdFicheCourante = obtenirValeurUrlParam('id');
+    //     const refBtnRadio = document.querySelector("input[name=formChasse]:checked");
+    //     if (localStorage.id_personnage == undefined){
+    //         document.getElementById("message").innerHTML = "Aucune chasse en cours. Si vous désirez débuter une chasse, visitez la page <a href='../chasse/index.html'>Chasse</a>";
+    //     }else{
+
+    //         if (refBtnRadio === null){
+    //             document.getElementById("message").innerHTML = "Choisissez un indice";
+    //             console.log(refBtnRadio);
+    //         }else{
+                
+    //             if (refBtnRadio.value == "personnage"){
+    //                 if (intIdFicheCourante == localStorage.id_personnage){
+    //                     document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[localStorage.id_personnage].CHASSE.REPONSE;
+    //                     localStorage.personne_est_trouve = true;
+    //                 }else{
+    //                     document.getElementById("message").innerHTML = "Désolé. Ce n’est pas le bon indice.";
+    //                 }
+    //             }
+    //             if (refBtnRadio.value == "objet"){
+    //                 if (intIdFicheCourante == localStorage.id_objet){
+    //                     document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[localStorage.id_objet].CHASSE.REPONSE;
+    //                     localStorage.objet_est_trouve = true;
+    //                 }else{
+    //                     document.getElementById("message").innerHTML = "Désolé. Ce n’est pas le bon indice.";
+    //                 }
+    //             }
+    //             if (refBtnRadio.value == "lieu"){
+    //                 if (intIdFicheCourante == localStorage.id_lieu){
+    //                     localStorage.lieu_est_trouve = true;
+    //                     document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[localStorage.id_lieu].CHASSE.REPONSE;
+    //                 }else{
+    //                     document.getElementById("message").innerHTML = "Désolé. Ce n’est pas le bon indice.";
+    //                 }
+    //             }
+    //         }
+    //     }
+    // },
 }
 
 objFicheArtsVisuels.initialiser();
-document.getElementById("btnSoumettre").addEventListener("click", function () {
-    objFicheArtsVisuels.verifierIndice();
-});
+// document.getElementById("btnSoumettre").addEventListener("click", function (){objFicheArtsVisuels.verifierIndice()});

@@ -27,6 +27,7 @@ const objJSONepigraphes = {
       "CREDIT": "Gabor Szilasi"
     },
     "DOMAINE": "Arts visuels",
+    "URL_DOMAINE":"arts-visuels.html",
     "CHASSE": {
       "CATEGORIE": "personnage",
       "INDICE": "un artiste peintre avant-gardiste",
@@ -55,6 +56,7 @@ const objJSONepigraphes = {
       "CREDIT": "Bibliothèque et Archives nationales du Québec"
     },
     "DOMAINE": "Sciences et Lettres",
+    "URL_DOMAINE":"sciences-et-lettres.html",
     "CHASSE": {
       "CATEGORIE": "objet",
       "INDICE": " a lu le roman «Les Anciens canadiens» ",
@@ -83,6 +85,7 @@ const objJSONepigraphes = {
       "CREDIT": "Photographe Roger Guillemette, Collection Musée Madame Henriette Belley"
     },
     "DOMAINE": "Sports et spectacles",
+    "URL_DOMAINE":"sports-et-spectacles.html",
     "CHASSE": {
       "CATEGORIE": "objet",
       "INDICE": " a porté une robe extravagante ",
@@ -110,6 +113,8 @@ const objJSONepigraphes = {
       "TITRE": "Maison Kerhulu, entre 1939 et 1945",
       "CREDIT": "Agathe Chiasson-Leblanc"
     },
+    "DOMAINE": "Sciences et lettres",
+    "URL_DOMAINE":"sciences-et-lettres.html",
     "CHASSE": {
       "CATEGORIE": "lieu",
       "INDICE": " à la maison Kerhulu.",
@@ -138,6 +143,7 @@ const objJSONepigraphes = {
       "CREDIT": "Musée McCord"
     },
     "DOMAINE": "Économie et politique",
+    "URL_DOMAINE":"economie-et-politique.html",
     "CHASSE": {
       "CATEGORIE": "objet",
       "INDICE": " a bu une bouteille de bière ",
@@ -166,6 +172,7 @@ const objJSONepigraphes = {
       "CREDIT": "Collection privée"
     },
     "DOMAINE": "Économie et politique",
+    "URL_DOMAINE":"economie-et-politique.html",
     "CHASSE": {
       "CATEGORIE": "personnage",
       "INDICE": "Une militante d’origine française",
@@ -194,6 +201,7 @@ const objJSONepigraphes = {
       "CREDIT": "Photo Le Soleil"
     },
     "DOMAINE": "Sports et spectacles",
+    "URL_DOMAINE":"sports-et-spectacles.html",
     "CHASSE": {
       "CATEGORIE": "lieu",
       "INDICE": " au 630 rue Boisseau.",
@@ -222,6 +230,7 @@ const objJSONepigraphes = {
       "CREDIT": "Photo Collection privée"
     },
     "DOMAINE": "Sports et spectacles",
+    "URL_DOMAINE":"sports-et-spectacles.html",
     "CHASSE": {
       "CATEGORIE": "personnage",
       "INDICE": "l’Anguille",
@@ -250,6 +259,7 @@ const objJSONepigraphes = {
       "CREDIT": "Anonyme"
     },
     "DOMAINE": "Arts visuels",
+    "URL_DOMAINE":"arts-visuels.html",
     "CHASSE": {
       "CATEGORIE": "lieu",
       "INDICE": " dans l'atelier du sculpteur.",
@@ -278,6 +288,7 @@ const objJSONepigraphes = {
       "CREDIT": "Courtoisie de la collection historique de Bell Canada, 15414"
     },
     "DOMAINE": "Sciences et Lettres",
+    "URL_DOMAINE":"sciences-et-lettres.html",
     "CHASSE": {
       "CATEGORIE": "personnage",
       "INDICE": "Un ingénieur",
@@ -306,6 +317,7 @@ const objJSONepigraphes = {
       "CREDIT": "Musée national des beaux-arts du Québec"
     },
     "DOMAINE": "Arts visuels",
+    "URL_DOMAINE":"arts-visuels.html",
     "CHASSE": {
       "CATEGORIE": "objet",
       "INDICE": " a acheté à fort prix une peinture surréaliste ",
@@ -334,6 +346,7 @@ const objJSONepigraphes = {
       "CREDIT": "Photo Fondation Maurice Pollack"
     },
     "DOMAINE": "Économie et politique",
+    "URL_DOMAINE":"economie-et-politique.html",
     "CHASSE": {
       "CATEGORIE": "lieu",
       "INDICE": " dans un pavillon de l’Université Laval.",
