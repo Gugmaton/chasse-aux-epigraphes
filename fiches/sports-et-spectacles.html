@@ -10,15 +10,22 @@
   <meta name="keywords"
     content="Énigma, chasse, épigraphes, données ouvertes, Chasse aux épigraphes, personnages historiques">
   <meta name="author" content="Énigma & le programme Techniques d’intégration multimédia du Cégep de Sainte-Foy">
-  <title>Sports et Spectacles</title>
-  <link rel="stylesheet" href="../assets/css/secteur-sports-et-spectacles.css">
+  <title>Arts Visuels</title>
+  <link rel="stylesheet" href="../assets/css/secteur-arts-visuels.css">
+  <script defer src="../assets/js/menu.js"></script>
   <script defer src="../assets/js/epigraphes.js"></script>
   <script defer src="../assets/js/arts-visuels.js"></script>
-  <script defer src="../js/menu.js"></script>
-  <!-- Ugo Nanini -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon_chasse/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon_chasse/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images//favicon_chasse/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  <!-- Olivier Duclos -->
 </head>
 
-<body class="sports-et-spectacles">
+<body class="arts-visuels">
+  <a href="#contenu" class="lienrapide screen-reader-only focusable">Allez au contenu</a>
   <noscript>
     <p>Pour apprécier pleinement ce site, votre navigateur doit disposer de JavaScript, ce qui ne semble pas être le cas
       présentement. Alternativement, vous pouvez consulter le site de la Ville de Québec pour découvrir les épigraphes
@@ -194,15 +201,16 @@
         <li class="nav__list-item">
           <a href="../carte/index.html" class="nav__link">Carte</a>
         </li>
+        
       </ul>
     </nav>
   </header>
-  <main>
+  <main id="contenu">
     <div class="conteneur">
 
 
       <h1><span id="prenom"></span> <span id="nom"></span></h1>
-      <p class="secteur__activite"></p>
+      <p class="secteur__activite" id="domaine"></p>
 
       <div class="conteneur__bio">
         <figure class="image__bio">
@@ -214,7 +222,8 @@
         </figure>
         <div id="notes_biographiques" class="texte__bio">
           <h2 class="titre__bio">Notes biographiques</h2>
-          <p class="p__bio">
+          <p class="p__bio" id="p__biographie">
+            
           </p>
         </div>
       </div>
@@ -239,8 +248,7 @@
         <div class="section__commemoratif">
           <h2>Plaque commémorative</h2>
           <figure>
-            <img class="img_plaque" src=""
-              alt="Épigraphe de Edmund Alleyn" id="url_plaque">
+            <img id="url_plaque" class="img_plaque" src="" alt="Épigraphe d'une personne historique">
             <figcaption id="transcript">
             </figcaption>
           </figure>
@@ -272,7 +280,7 @@
   </main>
   <footer class="footer">
     <section class="social">
-      <p class="p__footer">Rejoignez-nous sur les médias sociaux !</p>
+      <p class="p__footer" >Rejoignez-nous sur les médias sociaux !</p>
       <ul class="social-menu">
         <li class="social-menu__item">
           <a class="social-menu__lien" href="">Facebook</a>
@@ -291,14 +299,14 @@
 
     <p class="p__footer">Une autre création de Énigma, 250 boul. Charest ouest, Québec, Québec. 418-654-9823</p>
 
-    <p class="p__footer">Merci à l'équipe des données ouvertes de la Ville de Québec qui a rendu disponibles le jeu de
+    <p class="p__footer">Merci à l’équipe des données ouvertes de la Ville de Québec qui a rendu disponibles le jeu de
       données « Épigraphes historiques » sous licence CC BY.
       Ces données ont été adaptées pour mieux répondre aux besoins pédagogiques et servir de prétexte à la « Chasse aux
       épigraphes ».
     </p>
     <p class="p__footer">
       Une réalisation de Maxime Lebrun, Ugo Nanini, Antoine Labarre et Olivier Duclos © Tous droits réservés 2023.
-      Travail scolaire réalisé dans le cadre du programme Techniques d'intégration multimédia. Cégep de Sainte-Foy
+      Travail scolaire réalisé dans le cadre du programme Techniques d’intégration multimédia. Cégep de Sainte-Foy
     </p>
   </footer>
 </body>

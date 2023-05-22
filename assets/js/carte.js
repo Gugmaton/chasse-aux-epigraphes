@@ -49,7 +49,7 @@ const objCarte = {
 				<div class="image"><img width="150" src="../assets/images/${strIdEpigraphe}_155.png"/></div>
 				<div class="titre">${objEpigrapheCourant.PRENOM} ${objEpigrapheCourant.NOM}</div>
 				<div class="adresse">${objEpigrapheCourant.ADRESSE}</div>
-				<a class="btn" href="../fiches/arts-visuels.html?id=${strIdEpigraphe}&titre=${objEpigrapheCourant.PRENOM}-${objEpigrapheCourant.NOM}">Consulter la fiche de ${objEpigrapheCourant.PRENOM} ${objEpigrapheCourant.NOM}</a>
+				<a class="btn" href="../fiches/${objEpigrapheCourant.URL_DOMAINE}?id=${strIdEpigraphe}&titre=${objEpigrapheCourant.PRENOM}-${objEpigrapheCourant.NOM}">Consulter la fiche de ${objEpigrapheCourant.PRENOM} ${objEpigrapheCourant.NOM}</a>
 			</div>`;
 			
 			console.log(strGabaritContenuInfobulle);
