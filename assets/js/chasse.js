@@ -35,9 +35,12 @@ const objChasse = {
         document.querySelector(".surCombien").classList.add("cache");
     },
     initialiserChasse: function () {
-        console.log("allo");
+        const refImgPerso = document.querySelector(".img__indice__perso");
+        const refImgObjet = document.querySelector(".img__indice__objet");
+        const refImgLieu = document.querySelector(".img__indice__lieu");
         document.querySelector('.progression').innerHTML= localStorage.nombre_indice_trouve;
-
+        //document.getElementById("textarea").innerHTML = "jadwwfawygd";
+        console.log(document.getElementById("textarea"));
         
         if (localStorage.id_personnage != undefined) {
             document.querySelector(".progression").classList.remove("cache");
@@ -48,6 +51,21 @@ const objChasse = {
             document.getElementById("indice__objet").innerHTML = objJSONepigraphes[localStorage.id_objet].CHASSE.INDICE;
             document.getElementById("indice__lieu").innerHTML = objJSONepigraphes[localStorage.id_lieu].CHASSE.INDICE;
         }
+        if(localStorage.getItem("personnage_est_trouve") == "true"){
+            refImgPerso.classList.remove("cache");
+            const intFicheGagnante = localStorage.getItem("id_personnage");
+            refImgPerso.src = `../assets/images/personnages/${intFicheGagnante}_chasse.jpg`;
+            }
+            if(localStorage.getItem("objet_est_trouve") == "true"){
+                refImgObjet.classList.remove("cache");
+                const intFicheGagnante = localStorage.getItem("id_objet");
+                refImgObjet.src = `../assets/images/objets/${intFicheGagnante}_objet.jpg`;
+                }
+                if(localStorage.getItem("lieu_est_trouve") == "true"){
+                    refImgLieu.classList.remove("cache");
+                    const intFicheGagnante = localStorage.getItem("id_lieu");
+                    refImgLieu.src = `../assets/images/lieux/${intFicheGagnante}_lieu.jpg`;
+                    }
     }
 
     // À compléter

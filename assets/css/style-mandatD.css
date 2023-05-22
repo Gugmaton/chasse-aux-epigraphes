@@ -200,3 +200,11 @@ display: flex;
 flex-direction: column;
 align-items: baseline;
 }
+
+#textarea {
+    background-color: white;
+    width: 400px;
+    text-align: left;
+    padding: 10px;
+    overflow: scroll;
+}
