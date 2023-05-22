@@ -15,8 +15,11 @@ const objFicheArtsVisuels = {
     /**
      * Cette méthode permet d'intégrer les contenus dynamiques provenant du JSON
      */
-    
+
     initialiser: function () {
+        const refImgPerso = document.querySelector(".img__indice__perso");
+        const refImgObjet = document.querySelector(".img__indice__objet");
+        const refImgLieu = document.querySelector(".img__indice__lieu");
         document.querySelector(".progression").innerHTML = localStorage.nombre_indice_trouve;
         // Prénom et nom dynamiques
         const intIdFicheCourante = obtenirValeurUrlParam('id');
@@ -40,10 +43,10 @@ const objFicheArtsVisuels = {
         const refPreambuleSonore = document.getElementById("audio_preambule");
         const refTranscriptionSonore = document.getElementById("audio_transcription");
         const refCreditAudio = document.getElementById("audio_credit");
-      
-            
 
-         // ÉCRIRE LE CONTENU DU JSON DANS LES ÉLÉMENTS HTML CIBLÉS.
+
+        // ÉCRIRE LE CONTENU DU JSON DANS LES ÉLÉMENTS HTML CIBLÉS.
+        
         refPrenom.innerHTML = objJSONepigraphes[intIdFicheCourante].PRENOM;
         refNom.innerHTML = objJSONepigraphes[intIdFicheCourante].NOM;
         refDomaine.innerHTML = objJSONepigraphes[intIdFicheCourante].DOMAINE;
@@ -65,84 +68,115 @@ const objFicheArtsVisuels = {
         refTranscriptionSonore.innerHTML = objJSONepigraphes[intIdFicheCourante].AUDIO.TRANSCRIPTION;
         refCreditAudio.innerHTML = objJSONepigraphes[intIdFicheCourante].AUDIO.CREDIT;
         // LIEN DES IMAGES
-        document.getElementById("url_image").src = `../assets/images/personnages/${intIdFicheCourante}_chasse.jpg`; 
+        document.getElementById("url_image").src = `../assets/images/personnages/${intIdFicheCourante}_chasse.jpg`;
         document.getElementById("carteZoom").src = `../assets/images/zoomGoogleMaps/${intIdFicheCourante}-zoom-google-maps.png`;
-        document.getElementById("url_plaque").src = `../assets/images/epigraphes/${intIdFicheCourante}_plaque.jpg`; 
-        
+        document.getElementById("url_plaque").src = `../assets/images/epigraphes/${intIdFicheCourante}_plaque.jpg`;
+
+        if(localStorage.getItem("personnage_est_trouve") == "true"){
+            refImgPerso.classList.remove("cache");
+            const intFicheGagnante = localStorage.getItem("id_personnage");
+            refImgPerso.src = `../assets/images/personnages/${intFicheGagnante}_chasse.jpg`;
+            }
+            if(localStorage.getItem("objet_est_trouve") == "true"){
+                refImgObjet.classList.remove("cache");
+                const intFicheGagnante = localStorage.getItem("id_objet");
+                refImgObjet.src = `../assets/images/objets/${intFicheGagnante}_objet.jpg`;
+                }
+                if(localStorage.getItem("lieu_est_trouve") == "true"){
+                    refImgLieu.classList.remove("cache");
+                    const intFicheGagnante = localStorage.getItem("id_lieu");
+                    refImgLieu.src = `../assets/images/lieux/${intFicheGagnante}_lieu.jpg`;
+                    }
 
         // LOCAL STORAGE QUI VA SERVIR POUR GOOGLE MAP
         localStorage.setItem(intIdFicheCourante, true);
-        
+
     },
-    verifierIndice: function (){
+    verifierIndice: function () {
         const intIdFicheCourante = obtenirValeurUrlParam('id');
         const refBtnRadio = document.querySelector("input[name=formChasse]:checked");
-        
+
         const refProgression = document.querySelector(".progression");
         let intProgression = localStorage.nombre_indice_trouve;
-
         console.log(refBtnRadio);
         console.log(typeof intProgression);
         console.log(refProgression);
-        if (localStorage.id_personnage == undefined){
+        const refImgPerso = document.querySelector(".img__indice__perso");
+        localStorage.image_personnage
+        const refImgObjet = document.querySelector(".img__indice__objet");
+        const refImgLieu = document.querySelector(".img__indice__lieu");
+        const refSVG = document.querySelector("indice__svg");
+        if (localStorage.id_personnage == undefined) {
             document.getElementById("message").innerHTML = "Aucune chasse en cours. Si vous désirez débuter une chasse, visitez la page <a href='../chasse/index.html'>Chasse</a>";
-        }else{
+        } else {
 
-            if (refBtnRadio === null){
+            if (refBtnRadio === null) {
                 document.getElementById("message").innerHTML = "Choisissez un indice";
                 console.log(refBtnRadio);
-            }else{
+            } else {
                 if (refBtnRadio.value == "perso") {
-                    if (intIdFicheCourante == localStorage.id_personnage){
+                    if (intIdFicheCourante == localStorage.id_personnage) {
                         document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[localStorage.id_personnage].CHASSE.REPONSE;
                         localStorage.personnage_est_trouve = true;
                         intProgression++;
+                        refImgPerso.classList.remove("cache");
+                        refImgPerso.src = `../assets/images/personnages/${intIdFicheCourante}_chasse.jpg`;
+                        // localStorage.setItem("image_personnage", `../assets/images/lieux/${intIdFicheCourante}_lieu.jpg`);
+                        
 
-                        if(intProgression <= 3){
+                        if (intProgression <= 3) {
                             localStorage.setItem("nombre_indice_trouve", intProgression);
-                        console.log(intProgression);
-                        refProgression.innerHTML = localStorage.nombre_indice_trouve;
+                            console.log(intProgression);
+                            refProgression.innerHTML = localStorage.nombre_indice_trouve;
                         }
                         
 
-                        
-                        
-                    }else{
+
+
+
+                    } else {
                         document.getElementById("message").innerHTML = "Désolé. Ce n'est pas le bon indice.";
                     }
                 }
-                if (refBtnRadio.value == "objet"){
-                    if (intIdFicheCourante == localStorage.id_objet){
+                if (refBtnRadio.value == "objet") {
+                    if (intIdFicheCourante == localStorage.id_objet) {
                         document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[localStorage.id_objet].CHASSE.REPONSE;
                         localStorage.objet_est_trouve = true;
                         intProgression++;
-                        if(intProgression <= 3){
+                        if (intProgression <= 3) {
                             localStorage.setItem("nombre_indice_trouve", intProgression);
-                        console.log(intProgression);
-                        refProgression.innerHTML = localStorage.nombre_indice_trouve;
+                            console.log(intProgression);
+                            refProgression.innerHTML = localStorage.nombre_indice_trouve;
                         }
-                    }else{
+                        refImgObjet.classList.remove("cache");
+                        refImgObjet.src = `../assets/images/objets/${intIdFicheCourante}_objet.jpg`;
+                        localStorage.setItem("objet_personnage", `../assets/images/lieux/${intIdFicheCourante}_lieu.jpg`);
+                        console.log(intIdFicheCourante);
+                    } else {
                         document.getElementById("message").innerHTML = "Désolé. Ce n'est pas le bon indice.";
                     }
                 }
-                if (refBtnRadio.value == "lieu"){
-                    if (intIdFicheCourante == localStorage.id_lieu){
+                if (refBtnRadio.value == "lieu") {
+                    if (intIdFicheCourante == localStorage.id_lieu) {
                         localStorage.lieu_est_trouve = true;
                         document.getElementById("message").innerHTML = "Bravo! Vous avez trouvé " + objJSONepigraphes[localStorage.id_lieu].CHASSE.REPONSE;
                         intProgression++;
-                        if(intProgression <= 3){
+                        if (intProgression <= 3) {
                             localStorage.setItem("nombre_indice_trouve", intProgression);
-                        console.log(intProgression);
-                        refProgression.innerHTML = localStorage.nombre_indice_trouve;
+                            console.log(intProgression);
+                            refProgression.innerHTML = localStorage.nombre_indice_trouve;
                         }
-                    }else{
+                        refImgLieu.classList.remove("cache");
+                        refImgLieu.src = `../assets/images/lieux/${intIdFicheCourante}_lieu.jpg`;
+                        localStorage.setItem("lieu_personnage", `../assets/images/lieux/${intIdFicheCourante}_lieu.jpg`);
+                    } else {
                         document.getElementById("message").innerHTML = "Désolé. Ce n'est pas le bon indice.";
                     }
                 }
 
                 if (refProgression.innerHTML >= 3) {
                     refProgression.innerHTML = 3;
-                    document.getElementById("message").innerHTML = "Bravo! Vous avez terminé la chasse, vous pouvez maintenant participer au <a href='../concours/index.html'>Concours!</a>";
+                    document.getElementById("message").innerHTML = "Bravo! Vous avez terminé la chasse, vous pouvez maintenant participer au <a class='lien__concours' href='../concours/index.html'>Concours!</a>";
                 }
             }
         }
