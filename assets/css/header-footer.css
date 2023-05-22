@@ -15,6 +15,7 @@
 * HEADER
 * NAV
 * FOOTER
+* CLASSE CACHÉE
 **/
 
 /* svg */
@@ -105,4 +106,9 @@
 .p__footer{
     text-align: center;
     color: white;
+}
+
+/* CLASSE CACHE */
+.cache{
+  display: none;
 }
