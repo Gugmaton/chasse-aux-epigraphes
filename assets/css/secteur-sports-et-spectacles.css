@@ -20,6 +20,7 @@
 * SECTION LOCALISATION
 * SECTION PLAQUE COMMÉMORATIVE
 * SECTION CAPSULE SONORE
+* SECTION CHASSE
 */
 
 /* TITRES */
@@ -132,3 +133,113 @@ h3{
    margin-top: 10px;
   }
 }
+
+/* SECTION CHASSE */
+
+.img__indice__perso{
+   border-radius: 50%;
+   width: 100px;
+   height: 100px;
+}
+.img__indice__objet{
+ border-radius: 50%;
+ width: 100px;
+ height: 100px;
+}
+.img__indice__lieu{
+ border-radius: 50%;
+ width: 100px;
+ height: 100px;
+}
+
+@media(min-width:300px){
+   .img__indice__perso{
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+    }
+    .img__indice__objet{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    }
+    .img__indice__lieu{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    }
+}
+@media(min-width:700px){
+   .img__indice__perso{
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+    }
+    .img__indice__objet{
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+    }
+    .img__indice__lieu{
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+    }
+}
+@media(min-width:1000px){
+   .img__indice__perso{
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+    }
+    .img__indice__objet{
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+    }
+    .img__indice__lieu{
+      border-radius: 50%;
+      width: 300px;
+      height: 300px;
+    }
+}
+
+.btn__soumettre{
+   width: 20%;
+   margin-left: 40%;
+   margin-top: 2%;
+   background-color: #F1DB32;
+   font-size: 130%;
+   padding: 1.5%;
+   border-radius: 20px;
+ }
+ @media(min-width:300px){
+   .btn__soumettre{
+     width: 60%;
+     margin-left: 10%;
+     background-color: #F1DB32;
+     font-size: 75%;
+     padding: 1.5%;
+     border-radius: 20px;
+   }
+ }
+ @media(min-width:700px){
+   .btn__soumettre{
+     width: 35%;
+     margin-left: 35%;
+     background-color: #F1DB32;
+     font-size: 130%;
+     padding: 1.5%;
+     border-radius: 20px;
+   }
+ }
+ @media(min-width:1000px){
+   .btn__soumettre{
+     width: 30%;
+     margin-left: 35%;
+     background-color: #F1DB32;
+     font-size: 200%;
+     padding: 1.5%;
+     border-radius: 20px;
+   }
+ }

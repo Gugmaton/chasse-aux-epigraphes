@@ -55,16 +55,19 @@ const objChasse = {
             refImgPerso.classList.remove("cache");
             const intFicheGagnante = localStorage.getItem("id_personnage");
             refImgPerso.src = `../assets/images/personnages/${intFicheGagnante}_chasse.jpg`;
+            document.querySelector(".indice__svg").classList.add("cache");
             }
             if(localStorage.getItem("objet_est_trouve") == "true"){
                 refImgObjet.classList.remove("cache");
                 const intFicheGagnante = localStorage.getItem("id_objet");
                 refImgObjet.src = `../assets/images/objets/${intFicheGagnante}_objet.jpg`;
+                document.querySelector(".indice__svg").classList.add("cache");
                 }
                 if(localStorage.getItem("lieu_est_trouve") == "true"){
                     refImgLieu.classList.remove("cache");
                     const intFicheGagnante = localStorage.getItem("id_lieu");
                     refImgLieu.src = `../assets/images/lieux/${intFicheGagnante}_lieu.jpg`;
+                    document.querySelector(".indice__svg").classList.add("cache");
                     }
     }
 
