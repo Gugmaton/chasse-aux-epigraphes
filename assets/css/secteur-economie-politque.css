@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
- * @author: maxamax2
+ * @author: ARTADestrokzZ
  */
 
 /* IMPORTER LES FICHIERS CSS */
@@ -13,7 +13,7 @@
 @import url(header-footer.css);
 
 /*
-* SECTEUR ARTS VISUELS
+* SECTEUR ECONOMIE ET POLITIQUE
 * TITRES
 * BACKGROUND IMAGE
 * SECTION NOTES BIOGRAPHIQUES
@@ -36,8 +36,8 @@ h3{
    color: #595322;
 }
 /* BACKGROUND IMAGE */
-.arts-visuels{
-   background-image: url(../images/SciencesetlettresBackground.jpg);
+.economie-politique{
+   background-image: url(../images/economie-politique.webp);
    background-position: center;
 }
 /* Quelques utilitaires */
@@ -124,10 +124,10 @@ h3{
      margin-bottom: 50px;
   }
   .audio{
-   width: 60%;
+   width: 50%;
   }
   .texte__audio{
-   width: 40%;
+   width: 50%;
    margin-top: 10px;
   }
 }
@@ -203,41 +203,41 @@ h3{
 }
 
 .btn__soumettre{
-   width: 20%;
-   margin-left: 40%;
-   margin-top: 2%;
-   background-color: #F1DB32;
-   font-size: 130%;
-   padding: 1.5%;
-   border-radius: 20px;
- }
- @media(min-width:300px){
-   .btn__soumettre{
-     width: 60%;
-     margin-left: 10%;
-     background-color: #F1DB32;
-     font-size: 75%;
-     padding: 1.5%;
-     border-radius: 20px;
-   }
- }
- @media(min-width:700px){
-   .btn__soumettre{
-     width: 35%;
-     margin-left: 35%;
-     background-color: #F1DB32;
-     font-size: 130%;
-     padding: 1.5%;
-     border-radius: 20px;
-   }
- }
- @media(min-width:1000px){
-   .btn__soumettre{
-     width: 30%;
-     margin-left: 35%;
-     background-color: #F1DB32;
-     font-size: 200%;
-     padding: 1.5%;
-     border-radius: 20px;
-   }
- }
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 2%;
+    background-color: #F1DB32;
+    font-size: 130%;
+    padding: 1.5%;
+    border-radius: 20px;
+  }
+  @media(min-width:300px){
+    .btn__soumettre{
+      width: 60%;
+      margin-left: 10%;
+      background-color: #F1DB32;
+      font-size: 75%;
+      padding: 1.5%;
+      border-radius: 20px;
+    }
+  }
+  @media(min-width:700px){
+    .btn__soumettre{
+      width: 35%;
+      margin-left: 35%;
+      background-color: #F1DB32;
+      font-size: 130%;
+      padding: 1.5%;
+      border-radius: 20px;
+    }
+  }
+  @media(min-width:1000px){
+    .btn__soumettre{
+      width: 30%;
+      margin-left: 35%;
+      background-color: #F1DB32;
+      font-size: 200%;
+      padding: 1.5%;
+      border-radius: 20px;
+    }
+  }
